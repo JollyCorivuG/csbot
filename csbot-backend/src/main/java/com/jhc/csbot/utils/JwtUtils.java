@@ -77,10 +77,7 @@ public class JwtUtils {
      * @return
      */
     public static DecodedJWT verifyToken(String token) {
-        // 1.去除 token 中的 Bearer
-        token = token.replace("Bearer ", "");
-
-        // 2.验证 token
+        // 1.验证 token
         DecodedJWT jwt;
         try {
             JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(TOKEN_SECRET)).build();
@@ -89,7 +86,7 @@ public class JwtUtils {
             throw new BizException(ErrorStatus.FORBIDDEN_ERROR, "token 不合法");
         }
 
-        // 3.返回解码后的 jwt
+        // 2.返回解码后的 jwt
         return jwt;
     }
 
