@@ -53,7 +53,7 @@ const carouselItem = computed(() => [
     }
 
     .carousel-image {
-        width: calc(45%);
+        width: calc(40%);
         margin-top: 30px;
     }
 }

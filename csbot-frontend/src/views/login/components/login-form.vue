@@ -15,35 +15,41 @@
                 hide-label
             >
                 <a-input
-                    placeholder="请输入用户名"
+                    placeholder="请输入手机号"
                 >
-                    <template #prefix>
-                        <icon-user />
+                    <template #prepend>
+                        +86
                     </template>
                 </a-input>
             </a-form-item>
             <a-form-item
-                field="password"
+                field="captcha"
                 :validate-trigger="['change', 'blur']"
                 hide-label
             >
-                <a-input-password
+                <a-input
                     allow-clear
-                    placeholder="请输入密码"
+                    placeholder="请输入验证码"
                 >
-                    <template #prefix>
-                        <icon-lock />
-                    </template>
-                </a-input-password>
+                </a-input>
+                <div class="captcha">
+                    <a-image
+                        :preview="false"
+                        :width="captcha.width"
+                        :height="captcha.height"
+                        :src="captcha.base64"
+                        @click="refreshCaptcha"
+                    />
+                </div>
             </a-form-item>
             <a-space :size="16" direction="vertical">
                 <div class="login-form-password-actions">
                     <a-checkbox
-                        checked="rememberPassword"
+                        default-checked
                     >
-                        记住密码
+                        记住账号
                     </a-checkbox>
-                    <a-link>忘记密码</a-link>
+                    <a-link>找回账号</a-link>
                 </div>
                 <a-button type="primary" html-type="submit" long>
                     登录
@@ -51,9 +57,33 @@
             </a-space>
         </a-form>
     </div>
+
 </template>
 
 <script setup lang="ts">
+import {ref} from "vue";
+import {CaptchaInfo, CaptchaResponse} from "@/api/user/type.ts";
+import {Message} from "@arco-design/web-vue";
+import {reqCaptcha} from "@/api/user";
+
+// 验证码信息
+const captcha = ref<CaptchaInfo>({
+    base64: '',
+    width: 0,
+    height: 0
+})
+const getCaptcha = async () => {
+    const resp: CaptchaResponse = await reqCaptcha()
+    if (resp.statusCode != 0) {
+        Message.error(resp.statusMsg)
+        return
+    }
+    captcha.value = resp.data
+}
+getCaptcha()
+const refreshCaptcha = async () => {
+    await getCaptcha()
+}
 </script>
 
 <style lang="scss" scoped>
@@ -86,6 +116,10 @@
 
     .login-form-register-btn {
         color: var(--color-text-3) !important;
+    }
+    .captcha {
+        cursor: pointer;
+        margin-left: 15px;
     }
 }
 </style>
