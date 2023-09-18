@@ -10,4 +10,6 @@ public class RedisConstants {
     public static final Integer CAPTCHA_EXPIRE_TIME = 60;
     // 验证码前缀
     public static final String CAPTCHA_PREFIX = "captcha:";
+    // 验证码自增 id
+    public static final String CAPTCHA_ID_KEY = "captcha:id";
 }

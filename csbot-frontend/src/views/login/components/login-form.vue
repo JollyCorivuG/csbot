@@ -5,17 +5,20 @@
             <span>Cs Bot</span>
         </div>
         <a-form
-            ref="loginForm"
             class="login-form"
             layout="vertical"
+            :model="loginForm"
         >
             <a-form-item
-                field="username"
+                field="phone"
                 :validate-trigger="['change', 'blur']"
                 hide-label
+                :rules="rules.phone"
             >
                 <a-input
                     placeholder="请输入手机号"
+                    allow-clear
+                    v-model="loginForm.phone"
                 >
                     <template #prepend>
                         +86
@@ -26,10 +29,12 @@
                 field="captcha"
                 :validate-trigger="['change', 'blur']"
                 hide-label
+                :rules="rules.captcha"
             >
                 <a-input
                     allow-clear
                     placeholder="请输入验证码"
+                    v-model="loginForm.captcha"
                 >
                 </a-input>
                 <div class="captcha">
@@ -51,7 +56,7 @@
                     </a-checkbox>
                     <a-link>找回账号</a-link>
                 </div>
-                <a-button type="primary" html-type="submit" long>
+                <a-button type="primary" html-type="submit" long @click="login" :loading="loading">
                     登录
                 </a-button>
             </a-space>
@@ -62,12 +67,44 @@
 
 <script setup lang="ts">
 import {ref} from "vue";
-import {CaptchaInfo, CaptchaResponse} from "@/api/user/type.ts";
+import {CaptchaInfo, CaptchaResponse, LoginParams} from "@/api/user/type.ts";
 import {Message} from "@arco-design/web-vue";
 import {reqCaptcha} from "@/api/user";
+import {CommonResponse} from "@/api/auth/type.ts";
+import useUserStore from "@/pinia/modules/user";
+import {useRouter} from "vue-router";
+
+// 表单验证
+const loginForm = ref<LoginParams>({
+    phone: '18611555833',
+    captchaId: 0,
+    captcha: ''
+})
+const rules = {
+    phone: [{
+        validator: (value: string, cb: (error?: string) => void): void => {
+            if (!/^1[3456789]\d{9}$/.test(value)) {
+                cb('请输入正确的手机号')
+                return
+            }
+            cb()
+        }
+    }],
+    captcha: [{
+        validator: (value: string, cb: (error?: string) => void): void => {
+            // 用正则表达式表示4位数字或字母
+            if (!/^[a-zA-Z0-9]{4}$/.test(value)) {
+                cb('请输入正确的验证码')
+                return
+            }
+            cb()
+        }
+    }],
+}
 
 // 验证码信息
 const captcha = ref<CaptchaInfo>({
+    id: 0,
     base64: '',
     width: 0,
     height: 0
@@ -79,10 +116,32 @@ const getCaptcha = async () => {
         return
     }
     captcha.value = resp.data
+    loginForm.value.captchaId = captcha.value.id
 }
 getCaptcha()
 const refreshCaptcha = async () => {
     await getCaptcha()
+}
+
+// 登录
+const userStore = useUserStore()
+const loading = ref<boolean>(false)
+const router = useRouter()
+const login = async () => {
+    if (loginForm.value.captcha.length != 4 || !/^1[3456789]\d{9}$/.test(loginForm.value.phone)) {
+        Message.error('请检查表单正确性！')
+        return
+    }
+    loading.value = true
+    const resp: CommonResponse = await userStore.login(loginForm.value)
+    if (resp.statusCode != 0) {
+        Message.error(resp.statusMsg)
+        loading.value = false
+        return
+    }
+    await router.push('/index')
+    Message.success('登录成功！')
+    loading.value = false
 }
 </script>
 

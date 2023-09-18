@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/RedisConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/config/KaptchaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/user/CaptchaImgInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/csbot.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/csbot.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/RedisConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/RedisConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/SysConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/SysConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/user/CaptchaImgInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/user/CaptchaImgInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/RedisUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/login/components/banner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/login/components/banner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/login/components/login-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/login/components/login-form.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,34 +57,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/full_stack_project/csbot/csbot-backend/src/main/java/com/jhc/csbot/common/domain/vo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Errors",
-    "spring.configuration.checksum": "d2e6516e1a527b02b7b82086855f3239",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/full_stack_project/csbot/csbot-backend/src/main/java/com/jhc/csbot/common/domain/vo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d2e6516e1a527b02b7b82086855f3239&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\common\domain\vo" />
@@ -129,6 +129,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceTest.testQueryUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="csbot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jhc.csbot.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jhc.csbot.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="testQueryUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testSaveUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="csbot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jhc.csbot.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jhc.csbot.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="testSaveUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CsBotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="csbot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jhc.csbot.CsBotApplication" />
@@ -145,6 +177,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.CsBotApplication" />
+        <item itemvalue="JUnit.UserServiceTest.testQueryUser" />
+        <item itemvalue="JUnit.UserServiceTest.testSaveUser" />
         <item itemvalue="JUnit.AuthServiceTest.testGetTwoTokens" />
         <item itemvalue="JUnit.JwtUtilsTest.testGenerate" />
       </list>
@@ -165,7 +199,10 @@
       <workItem from="1694658705963" duration="4967000" />
       <workItem from="1694680944992" duration="2448000" />
       <workItem from="1694741777585" duration="2975000" />
-      <workItem from="1694862377812" duration="5815000" />
+      <workItem from="1694862377812" duration="6076000" />
+      <workItem from="1694920315566" duration="14000" />
+      <workItem from="1695005239763" duration="1786000" />
+      <workItem from="1695013576456" duration="5952000" />
     </task>
     <servers />
   </component>

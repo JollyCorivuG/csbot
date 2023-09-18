@@ -5,15 +5,16 @@ import com.jhc.csbot.common.constants.RedisConstants;
 import com.jhc.csbot.common.domain.enums.ErrorStatus;
 import com.jhc.csbot.common.domain.vo.resp.BasicResponse;
 import com.jhc.csbot.common.exception.BizException;
+import com.jhc.csbot.model.dto.user.LoginForm;
+import com.jhc.csbot.model.vo.auth.AuthInfo;
 import com.jhc.csbot.model.vo.user.CaptchaImgInfo;
+import com.jhc.csbot.service.IUserService;
 import com.jhc.csbot.utils.RedisUtils;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import org.apache.tomcat.util.codec.binary.Base64;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -36,12 +37,16 @@ public class UserController {
     @Resource
     private RedisUtils redisUtils;
 
+    @Resource
+    private IUserService userService;
+
     @GetMapping("/public/captcha")
     @Operation(summary = "得到验证码")
     public BasicResponse<CaptchaImgInfo> captcha() {
         // 1.生成验证码并保存到 redis
         String captchaText = captchaProducer.createText();
-        redisUtils.setWithExpireTime(RedisConstants.CAPTCHA_PREFIX + captchaText, captchaText, RedisConstants.CAPTCHA_EXPIRE_TIME, TimeUnit.SECONDS);
+        Long captchaId = redisUtils.getIncId(RedisConstants.CAPTCHA_ID_KEY);
+        redisUtils.setWithExpireTime(RedisConstants.CAPTCHA_PREFIX + captchaId.toString(), captchaText, RedisConstants.CAPTCHA_EXPIRE_TIME, TimeUnit.SECONDS);
         BufferedImage captchaImage = captchaProducer.createImage(captchaText);
 
         // 2.将验证码图片转换为base64
@@ -56,9 +61,17 @@ public class UserController {
 
         // 3.返回验证码图片信息
         return BasicResponse.success(CaptchaImgInfo.builder()
+                .id(captchaId)
                 .base64(base64)
                 .width(captchaImage.getWidth())
                 .height(captchaImage.getHeight())
                 .build());
+    }
+
+    @PostMapping("/public/login")
+    @Operation(summary = "登录")
+    public BasicResponse<AuthInfo> login(@RequestBody LoginForm loginForm) {
+        AuthInfo authInfo = userService.login(loginForm);
+        return BasicResponse.success(authInfo);
     }
 }
