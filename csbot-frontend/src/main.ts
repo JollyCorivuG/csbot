@@ -6,6 +6,7 @@ import pinia from '@/pinia'
 import ArcoVue from '@arco-design/web-vue'
 import '@arco-design/web-vue/dist/arco.css'
 import ArcoVueIcon from '@arco-design/web-vue/es/icon';
+import '@/permission.ts'
 
 const app = createApp(App)
 app.use(router)

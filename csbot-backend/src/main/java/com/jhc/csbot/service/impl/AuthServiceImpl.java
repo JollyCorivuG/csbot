@@ -15,8 +15,8 @@ public class AuthServiceImpl implements IAuthService {
     @Override
     public AuthInfo getTwoTokens(Long userId) {
         return AuthInfo.builder()
-                .aToken(JwtUtils.generateAToken(userId))
-                .rToken(JwtUtils.generateRToken(userId))
+                .accessToken(JwtUtils.generateAToken(userId))
+                .refreshToken(JwtUtils.generateRToken(userId))
                 .build();
     }
 }

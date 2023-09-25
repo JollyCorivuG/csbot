@@ -48,7 +48,7 @@ public class TokenInterceptor implements HandlerInterceptor {
 
         // 4.将相关信息放入请求上下文
         RequestInfo info = new RequestInfo();
-        info.setUid(JwtUtils.getUIdFromToken(request.getHeader(TokenInterceptor.AUTHORIZATION_HEADER)));
+        info.setUid(JwtUtils.getUIdFromToken(token));
         info.setIp(request.getRemoteAddr());
         RequestHolder.set(info);
         return true;

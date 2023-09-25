@@ -8,8 +8,10 @@ import com.jhc.csbot.common.exception.BizException;
 import com.jhc.csbot.model.dto.user.LoginForm;
 import com.jhc.csbot.model.vo.auth.AuthInfo;
 import com.jhc.csbot.model.vo.user.CaptchaImgInfo;
+import com.jhc.csbot.model.vo.user.UserInfo;
 import com.jhc.csbot.service.IUserService;
 import com.jhc.csbot.utils.RedisUtils;
+import com.jhc.csbot.utils.RequestHolder;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
@@ -73,5 +75,12 @@ public class UserController {
     public BasicResponse<AuthInfo> login(@RequestBody LoginForm loginForm) {
         AuthInfo authInfo = userService.login(loginForm);
         return BasicResponse.success(authInfo);
+    }
+
+    @GetMapping("/me")
+    @Operation(summary = "获取当前用户信息")
+    public BasicResponse<UserInfo> getMe() {
+        Long userId = RequestHolder.get().getUid();
+        return BasicResponse.success(userService.getUserInfoById(userId));
     }
 }

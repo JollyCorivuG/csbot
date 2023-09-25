@@ -5,17 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/entity/Msg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/csbot.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/csbot.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/RedisConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/RedisConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/SysConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/SysConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/user/CaptchaImgInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/user/CaptchaImgInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/RedisUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/dao/user/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/dao/user/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/interceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/interceptor/TokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/auth/AuthInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/auth/AuthInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jhc/csbot/utils/JwtUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jhc/csbot/utils/JwtUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/login/components/login-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/login/components/login-form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/utils/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/utils/request.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -69,7 +79,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/full_stack_project/csbot/csbot-backend/src/main/java/com/jhc/csbot/common/domain/vo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/full_stack_project/csbot/csbot-backend/src/main/java/com/jhc/csbot/service/strategy/msg&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -82,11 +92,16 @@
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
       &quot;mysql&quot;
+    ],
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;5af18d64-7e8c-4574-9e54-304f6999ba53/schema/\&quot;csbot\&quot;&quot;
     ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\service\strategy\msg" />
+      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot" />
       <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\common\domain\vo" />
       <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\common\domain" />
       <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\resources" />
@@ -97,21 +112,11 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CsBotApplication">
-    <configuration name="AuthServiceTest.testGetTwoTokens" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="csbot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jhc.csbot.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jhc.csbot.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.service.AuthServiceTest" />
-      <option name="METHOD_NAME" value="testGetTwoTokens" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="csbot.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/sql/csbot.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="5af18d64-7e8c-4574-9e54-304f6999ba53" namespace="schema/&quot;csbot&quot;" />
+      <method v="2" />
     </configuration>
     <configuration name="JwtUtilsTest.testGenerate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="csbot" />
@@ -124,6 +129,22 @@
       <option name="PACKAGE_NAME" value="com.jhc.csbot.utils" />
       <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.utils.JwtUtilsTest" />
       <option name="METHOD_NAME" value="testGenerate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsgServiceTest.testInsertMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="csbot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jhc.csbot.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jhc.csbot.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.service.MsgServiceTest" />
+      <option name="METHOD_NAME" value="testInsertMsg" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,10 +198,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.CsBotApplication" />
+        <item itemvalue="JUnit.JwtUtilsTest.testGenerate" />
+        <item itemvalue="JUnit.MsgServiceTest.testInsertMsg" />
         <item itemvalue="JUnit.UserServiceTest.testQueryUser" />
         <item itemvalue="JUnit.UserServiceTest.testSaveUser" />
-        <item itemvalue="JUnit.AuthServiceTest.testGetTwoTokens" />
-        <item itemvalue="JUnit.JwtUtilsTest.testGenerate" />
       </list>
     </recent_temporary>
   </component>
@@ -202,11 +223,34 @@
       <workItem from="1694862377812" duration="6076000" />
       <workItem from="1694920315566" duration="14000" />
       <workItem from="1695005239763" duration="1786000" />
-      <workItem from="1695013576456" duration="5952000" />
+      <workItem from="1695013576456" duration="6153000" />
+      <workItem from="1695030313406" duration="630000" />
+      <workItem from="1695041311941" duration="3397000" />
+      <workItem from="1695086738157" duration="801000" />
+      <workItem from="1695094034729" duration="1070000" />
+      <workItem from="1695264365354" duration="697000" />
+      <workItem from="1695285067669" duration="1595000" />
+      <workItem from="1695365520922" duration="87000" />
+      <workItem from="1695618470769" duration="10012000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/IAuthService.java</url>
+          <line>15</line>
+          <properties class="com.jhc.csbot.service.IAuthService" method="getTwoTokens">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

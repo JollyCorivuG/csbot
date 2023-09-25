@@ -6,8 +6,8 @@ export interface CommonResponse {
 
 // Auth 信息
 export interface AuthInfo {
-    aToken: string,
-    rToken: string
+    accessToken: string,
+    refreshToken: string
 }
 
 // captcha 信息
@@ -34,5 +34,19 @@ export interface LoginParams {
 export interface LoginResponse extends CommonResponse {
     data: AuthInfo
 }
+
+// 用户信息
+export interface UserInfo {
+    id: number,
+    phone: string,
+    nickName: string,
+    avatar: string
+}
+
+// 获取当前登录用户信息返回响应
+export interface GetMeResponse extends CommonResponse {
+    data: UserInfo
+}
+
 
 

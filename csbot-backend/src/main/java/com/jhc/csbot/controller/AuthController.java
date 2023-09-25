@@ -37,8 +37,8 @@ public class AuthController {
 
         // 3.没达到阈值就只刷新aToken
         return BasicResponse.success(AuthInfo.builder()
-                .aToken(JwtUtils.generateAToken(userId))
-                .rToken(rToken)
+                .accessToken(JwtUtils.generateAToken(userId))
+                .refreshToken(rToken)
                 .build());
     }
 }

@@ -1,8 +1,6 @@
 package com.jhc.csbot.model.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.*;
 
 import java.io.Serial;
@@ -30,7 +28,9 @@ public class User implements Serializable {
     private String nickName;
     private String avatar;
     private Integer status;
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 }
 

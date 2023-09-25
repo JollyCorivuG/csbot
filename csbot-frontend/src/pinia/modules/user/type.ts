@@ -1,5 +1,6 @@
-import {AuthInfo} from "@/api/user/type.ts";
+import {AuthInfo, UserInfo} from "@/api/user/type.ts";
 
 export interface UserState {
-    authInfo: AuthInfo
+    authInfo: AuthInfo,
+    userInfo: UserInfo
 }

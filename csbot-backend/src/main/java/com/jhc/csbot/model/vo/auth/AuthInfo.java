@@ -15,6 +15,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthInfo {
-    private String aToken;
-    private String rToken;
+    private String accessToken;
+    private String refreshToken;
 }
