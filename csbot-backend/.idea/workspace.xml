@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/entity/Msg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/csbot.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/csbot.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/dao/user/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/dao/user/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/interceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/interceptor/TokenInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/auth/AuthInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/vo/auth/AuthInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jhc/csbot/utils/JwtUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jhc/csbot/utils/JwtUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/user/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/utils/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/utils/request.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,25 +214,12 @@
       <workItem from="1695285067669" duration="1595000" />
       <workItem from="1695365520922" duration="87000" />
       <workItem from="1695618470769" duration="10012000" />
+      <workItem from="1695630793186" duration="2385000" />
+      <workItem from="1695640251921" duration="778000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/IAuthService.java</url>
-          <line>15</line>
-          <properties class="com.jhc.csbot.service.IAuthService" method="getTwoTokens">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

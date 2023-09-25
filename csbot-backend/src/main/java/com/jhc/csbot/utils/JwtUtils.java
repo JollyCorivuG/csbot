@@ -3,6 +3,7 @@ package com.jhc.csbot.utils;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.jhc.csbot.common.domain.enums.ErrorStatus;
 import com.jhc.csbot.common.exception.BizException;
@@ -82,6 +83,8 @@ public class JwtUtils {
         try {
             JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(TOKEN_SECRET)).build();
             jwt = jwtVerifier.verify(token);
+        } catch (TokenExpiredException e) {
+            jwt = JWT.decode(token);
         } catch (Exception e) {
             throw new BizException(ErrorStatus.FORBIDDEN_ERROR, "token 不合法");
         }
