@@ -29,7 +29,7 @@ import ChatBox from "@/views/index/components/chat-box/index.vue";
     .wrapper {
         background-color: #272A37;
         width: 80vw;
-        height: 80vh;
+        height: 86vh;
         display: flex;
         border-radius: 16px;
     }

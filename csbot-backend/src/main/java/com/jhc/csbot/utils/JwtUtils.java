@@ -86,6 +86,7 @@ public class JwtUtils {
         } catch (TokenExpiredException e) {
             jwt = JWT.decode(token);
         } catch (Exception e) {
+
             throw new BizException(ErrorStatus.FORBIDDEN_ERROR, "token 不合法");
         }
 

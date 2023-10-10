@@ -22,15 +22,26 @@
         <div class="chat_container">
             <div class="message_container">
                 <a-list :bordered="false" :split="false" scrollbar :max-height="maxChatViewHeight">
-                    <div v-for="i in 100" class="single_message_container">
-                        <div v-if="i % 2 == 0" style="justify-self: flex-start">
-                            {{i}}
+
+                    <div class="single_message_container" v-for="(msg, index) in msgStore.msgList" :key="index">
+                        <div class="send-time-container" v-if="index == 0 || !isInSameMinute(msgStore.msgList[index - 1].sendTime.toString(), msgStore.msgList[index].sendTime.toString())">
+                            {{format(msg.sendTime.toString())}}
                         </div>
-                        <div v-else style="justify-self: flex-end">
-                            {{i}}
+                        <div class="other-people-message" v-if="msg.senderInfo.id != userStore.userInfo.id">
+                            <img alt="avatar" :src="msg.senderInfo.avatar" />
+                            <div class="chat_item_box">
+                                <div class="name">{{msg.senderInfo.nickName}}</div>
+                                <div class="content">{{msg.body.content}}</div>
+                            </div>
+                        </div>
+                        <div class="self-message" v-else>
+                            <div class="chat_item_box">
+                                <div class="name">{{msg.senderInfo.nickName}}</div>
+                                <div class="content">{{msg.body.content}}</div>
+                            </div>
+                            <img alt="avatar" :src="msg.senderInfo.avatar" />
                         </div>
                     </div>
-
                 </a-list>
             </div>
             <div class="input">
@@ -43,6 +54,9 @@
 <script setup lang="ts">
 import MsgInput from "@/views/index/components/chat-box/chat-message/msg-input/index.vue";
 import {onMounted, ref} from "vue";
+import useMsgStore from "@/pinia/modules/msg";
+import useUserStore from "@/pinia/modules/user";
+import {format, isInSameMinute} from "@/utils/time.ts";
 
 // 聊天框的最大高度
 const maxChatViewHeight = ref<number>(0)
@@ -50,6 +64,10 @@ onMounted(() => {
     const messageContainer = document.querySelector('.message_container')
     maxChatViewHeight.value = messageContainer?.clientHeight as number - 8
 })
+
+// 消息列表
+const msgStore = useMsgStore()
+const userStore = useUserStore()
 </script>
 
 <style scoped lang="scss">
@@ -123,8 +141,79 @@ onMounted(() => {
             .single_message_container {
                 margin: 8px 16px;
                 display: flex;
+                flex-direction: column;
                 color: white;
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+                .other-people-message {
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    .chat_item_box {
+                        flex: 1;
+                        padding: 0 52px 0 12px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .name {
+                            margin-bottom: 4px;
+                            font-size: 14px;
+                            color: #999;
+                        }
+                        .content {
+                            display: inline-block;
+                            min-height: 1em;
+                            max-width: 100%;
+                            padding: 8px 12px;
+                            font-size: 15px;
+                            line-height: 22px;
+                            word-break: break-word;
+                            background-color: #383C4B;
+                            border-radius: 2px 18px 18px;
+                        }
+                    }
+                }
+                .self-message {
+                    display: flex;
+                    width: 100%;
+                    align-items: flex-start;
+                    .chat_item_box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        flex: 1;
+                        padding: 0 12px 0 52px;
+                        .name {
+                            margin-bottom: 4px;
+                            font-size: 14px;
+                            color: #999;
+                        }
+                        .content {
+                            display: inline-block;
+                            max-width: 100%;
+                            min-height: 1em;
+                            padding: 8px 12px;
+                            font-size: 15px;
+                            line-height: 22px;
+                            word-break: break-word;
+                            background-color: #3991F7;
+                            border-radius: 18px 2px 18px 18px;
+                        }
+                    }
+                }
+                .send-time-container {
+                    margin: 8px 16px;
+                    display: flex;
+                    color: #999;
+                    font-size: 14px;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                }
             }
+
         }
         .input {
             padding: 2px 6px;

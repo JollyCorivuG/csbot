@@ -1032,83 +1032,86 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="300" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="301" parent="1" name="csbot">
-      <IntrospectionTimestamp>2023-09-25.22:02:36</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-25.06:02:36</LocalIntrospectionTimestamp>
+    <schema id="301" parent="1" name="apicloud">
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
-    <user id="302" parent="1" name="mysql.infoschema">
+    <schema id="302" parent="1" name="csbot">
+      <IntrospectionTimestamp>2023-10-09.21:45:16</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-10-09.05:45:16</LocalIntrospectionTimestamp>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <user id="303" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="303" parent="1" name="mysql.session">
+    <user id="304" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="304" parent="1" name="mysql.sys">
+    <user id="305" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="305" parent="1" name="root">
+    <user id="306" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="306" parent="301" name="msg">
+    <table id="307" parent="302" name="msg">
       <Comment>用户表</Comment>
       <Engine>InnoDB</Engine>
       <Options>row_format
 DYNAMIC</Options>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="307" parent="301" name="user">
+    <table id="308" parent="302" name="user">
       <Comment>用户表</Comment>
       <Engine>InnoDB</Engine>
       <Options>row_format
 DYNAMIC</Options>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <column id="308" parent="306" name="id">
+    <column id="309" parent="307" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>消息id</Comment>
       <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="309" parent="306" name="room_id">
+    <column id="310" parent="307" name="room_id">
       <Comment>会话id, 即该条消息属于哪个会话</Comment>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="310" parent="306" name="from_uid">
+    <column id="311" parent="307" name="from_uid">
       <Comment>消息发送者uid</Comment>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="311" parent="306" name="msg_type">
+    <column id="312" parent="307" name="msg_type">
       <Comment>消息类型</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="312" parent="306" name="msg_body">
+    <column id="313" parent="307" name="msg_body">
       <Comment>消息主体</Comment>
       <DasType>json|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="313" parent="306" name="create_time">
+    <column id="314" parent="307" name="create_time">
       <Comment>创建时间</Comment>
       <DasType>datetime(3)|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="314" parent="306" name="update_time">
+    <column id="315" parent="307" name="update_time">
       <Comment>更新时间</Comment>
       <DasType>datetime(3)|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
@@ -1116,64 +1119,64 @@ DYNAMIC</Options>
       <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
       <Position>7</Position>
     </column>
-    <index id="315" parent="306" name="PRIMARY">
+    <index id="316" parent="307" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="316" parent="306" name="idx_room_id">
+    <index id="317" parent="307" name="idx_room_id">
       <ColNames>room_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="317" parent="306" name="idx_from_uid">
+    <index id="318" parent="307" name="idx_from_uid">
       <ColNames>from_uid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="318" parent="306" name="PRIMARY">
+    <key id="319" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="319" parent="307" name="id">
+    <column id="320" parent="308" name="id">
       <AutoIncrement>1</AutoIncrement>
       <Comment>用户id</Comment>
       <DasType>bigint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="320" parent="307" name="phone">
+    <column id="321" parent="308" name="phone">
       <Comment>手机号</Comment>
       <DasType>varchar(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="321" parent="307" name="nick_name">
+    <column id="322" parent="308" name="nick_name">
       <Comment>用户昵称</Comment>
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="322" parent="307" name="avatar">
+    <column id="323" parent="308" name="avatar">
       <Comment>用户头像</Comment>
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="323" parent="307" name="status">
+    <column id="324" parent="308" name="status">
       <Comment>使用状态 0.正常 1拉黑</Comment>
       <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="324" parent="307" name="create_time">
+    <column id="325" parent="308" name="create_time">
       <Comment>创建时间</Comment>
       <DasType>datetime(3)|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="325" parent="307" name="update_time">
+    <column id="326" parent="308" name="update_time">
       <Comment>更新时间</Comment>
       <DasType>datetime(3)|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
@@ -1181,30 +1184,30 @@ DYNAMIC</Options>
       <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
       <Position>7</Position>
     </column>
-    <index id="326" parent="307" name="PRIMARY">
+    <index id="327" parent="308" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="327" parent="307" name="uniq_phone">
+    <index id="328" parent="308" name="uniq_phone">
       <ColNames>phone</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="328" parent="307" name="uniq_nick_name">
+    <index id="329" parent="308" name="uniq_nick_name">
       <ColNames>nick_name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="329" parent="307" name="PRIMARY">
+    <key id="330" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="330" parent="307" name="uniq_phone">
+    <key id="331" parent="308" name="uniq_phone">
       <UnderlyingIndexName>uniq_phone</UnderlyingIndexName>
     </key>
-    <key id="331" parent="307" name="uniq_nick_name">
+    <key id="332" parent="308" name="uniq_nick_name">
       <UnderlyingIndexName>uniq_nick_name</UnderlyingIndexName>
     </key>
   </database-model>

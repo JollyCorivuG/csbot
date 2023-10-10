@@ -12,8 +12,8 @@
       <schema-mapping>
         <introspection-scope>
           <node kind="schema">
-            <name qname="@" />
             <name qname="csbot" />
+            <name qname="@" />
           </node>
         </introspection-scope>
       </schema-mapping>

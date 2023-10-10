@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +217,12 @@
       <workItem from="1695365520922" duration="87000" />
       <workItem from="1695618470769" duration="10012000" />
       <workItem from="1695630793186" duration="2385000" />
-      <workItem from="1695640251921" duration="778000" />
+      <workItem from="1695640251921" duration="843000" />
+      <workItem from="1695735816631" duration="19000" />
+      <workItem from="1696472570756" duration="62000" />
+      <workItem from="1696517281152" duration="36000" />
+      <workItem from="1696828879761" duration="4451000" />
+      <workItem from="1696901181244" duration="4063000" />
     </task>
     <servers />
   </component>

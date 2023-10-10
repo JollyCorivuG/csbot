@@ -38,17 +38,19 @@ request.interceptors.response.use((response) => {
             break;
         case 401:
             // 如果返回 401, 说明 a_token 验证失败, 需要用 r_token 刷新
-            const resp: RefreshTokenResponse = await reqRefreshToken(localStorage.getItem('r_token') as string)
+            const resp: RefreshTokenResponse = await reqRefreshToken(localStorage.getItem('refreshToken') as string)
+            const userStore = useUserStore()
             if (resp.statusCode == 0) {
                 // 刷新成功, 保存新的 a_token 和 r_token
-                localStorage.setItem('a_token', resp.data.accessToken)
-                localStorage.setItem('r_token', resp.data.refreshToken)
+                localStorage.setItem('accessToken', resp.data.accessToken)
+                localStorage.setItem('refreshToken', resp.data.refreshToken)
+                userStore.authInfo.accessToken = resp.data.accessToken
+                userStore.authInfo.refreshToken = resp.data.refreshToken
                 // 重新发送请求
                 return request(config)
             }
 
             // 如果没成功说明登录过期, 返回登录页
-            const userStore = useUserStore()
             userStore.clearData()
             router.push({path: '/login'}).then(r => r)
             Message.error('登录过期, 请重新登录!')
