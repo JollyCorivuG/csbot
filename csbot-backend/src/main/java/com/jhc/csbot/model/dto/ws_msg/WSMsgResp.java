@@ -1,4 +1,4 @@
-package com.jhc.csbot.model.dto.msg;
+package com.jhc.csbot.model.dto.ws_msg;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,16 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Description: 发送消息请求
+ * @Description: 后端传给前端的 ws 消息
  * @Author: <a href="https://github.com/JollyCorivuG">JollyCorivuG</a>
- * @CreateTime: 2023/9/25
+ * @CreateTime: 2023/10/16
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class SendMsgReq {
-    private Long roomId;
-    private Integer type;
-    private Object body;
+public class WSMsgResp<T> {
+    Integer type;
+    T data;
 }

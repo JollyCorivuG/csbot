@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/utils/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/SysConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/common/constants/SysConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/MessageSendEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/MsgSendEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MessageSendListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/dto/msg/SendMsgReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/model/dto/msg/SendMsgReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/IMsgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/IMsgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/MsgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/MsgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/AbstractMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/AbstractMsgHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/TextMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/TextMsgHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +28,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -222,7 +227,9 @@
       <workItem from="1696472570756" duration="62000" />
       <workItem from="1696517281152" duration="36000" />
       <workItem from="1696828879761" duration="4451000" />
-      <workItem from="1696901181244" duration="4063000" />
+      <workItem from="1696901181244" duration="4064000" />
+      <workItem from="1697338563039" duration="3000" />
+      <workItem from="1697433329205" duration="5597000" />
     </task>
     <servers />
   </component>

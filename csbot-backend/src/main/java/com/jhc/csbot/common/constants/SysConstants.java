@@ -16,4 +16,7 @@ public class SysConstants {
     public static final Integer USER_STATUS_NORMAL = 0;
     public static final Integer USER_STATUS_BLACK = 1;
 
+    // 客服机器人的 ID 默认为 0
+    public static final Long CS_BOT_ID = 0L;
+
 }

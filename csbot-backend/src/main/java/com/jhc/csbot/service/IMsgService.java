@@ -1,6 +1,7 @@
 package com.jhc.csbot.service;
 
 import com.jhc.csbot.model.dto.msg.SendMsgReq;
+import com.jhc.csbot.model.entity.Msg;
 import com.jhc.csbot.model.vo.msg.MsgInfo;
 
 /**
@@ -16,4 +17,12 @@ public interface IMsgService {
      * @return
      */
     MsgInfo sendMsg(Long userId, SendMsgReq sendMsg);
+
+
+    /**
+     * 根据 id 获取消息
+     * @param msgId
+     * @return
+     */
+    Msg getMsgById(Long msgId);
 }

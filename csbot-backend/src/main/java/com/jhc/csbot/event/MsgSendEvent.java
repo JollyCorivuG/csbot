@@ -9,10 +9,10 @@ import org.springframework.context.ApplicationEvent;
  * @CreateTime: 2023/9/25
  */
 @Getter
-public class MessageSendEvent extends ApplicationEvent {
+public class MsgSendEvent extends ApplicationEvent {
     private final Long msgId;
 
-    public MessageSendEvent(Object source, Long msgId) {
+    public MsgSendEvent(Object source, Long msgId) {
         super(source);
         this.msgId = msgId;
     }

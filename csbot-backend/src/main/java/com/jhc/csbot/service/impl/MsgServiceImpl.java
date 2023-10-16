@@ -1,7 +1,9 @@
 package com.jhc.csbot.service.impl;
 
+import com.jhc.csbot.common.domain.enums.ErrorStatus;
+import com.jhc.csbot.common.exception.ThrowUtils;
 import com.jhc.csbot.dao.msg.MsgDao;
-import com.jhc.csbot.event.MessageSendEvent;
+import com.jhc.csbot.event.MsgSendEvent;
 import com.jhc.csbot.model.dto.msg.SendMsgReq;
 import com.jhc.csbot.model.entity.Msg;
 import com.jhc.csbot.model.vo.msg.MsgInfo;
@@ -38,9 +40,16 @@ public class MsgServiceImpl implements IMsgService {
         msgDao.saveMsg(msg);
 
         // 3.发布消息发送事件
-        applicationEventPublisher.publishEvent(new MessageSendEvent(this, msg.getId()));
+        applicationEventPublisher.publishEvent(new MsgSendEvent(this, msg.getId()));
 
         // 4.返回消息信息
         return msgAdapter.buildMsgResp(msg);
+    }
+
+    @Override
+    public Msg getMsgById(Long msgId) {
+        Msg msg = msgDao.getMsgById(msgId);
+        ThrowUtils.throwIf(msg == null, ErrorStatus.NOT_FOUND_ERROR);
+        return msg;
     }
 }
