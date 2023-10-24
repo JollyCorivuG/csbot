@@ -1,5 +1,6 @@
 package com.jhc.csbot.service.impl;
 
+import com.jhc.csbot.common.constants.SysConstants;
 import com.jhc.csbot.common.domain.enums.ErrorStatus;
 import com.jhc.csbot.common.exception.ThrowUtils;
 import com.jhc.csbot.dao.msg.MsgDao;
@@ -14,6 +15,9 @@ import com.jhc.csbot.service.strategy.msg.MsgHandlerFactory;
 import jakarta.annotation.Resource;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
+
+import java.util.Objects;
+
 
 /**
  * @Description: 消息服务接口实现类
@@ -40,7 +44,9 @@ public class MsgServiceImpl implements IMsgService {
         msgDao.saveMsg(msg);
 
         // 3.发布消息发送事件
-        applicationEventPublisher.publishEvent(new MsgSendEvent(this, msg.getId()));
+        if (!Objects.equals(userId, SysConstants.CS_BOT_ID)) {
+            applicationEventPublisher.publishEvent(new MsgSendEvent(this, msg.getId()));
+        }
 
         // 4.返回消息信息
         return msgAdapter.buildMsgResp(msg);

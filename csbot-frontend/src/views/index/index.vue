@@ -12,6 +12,11 @@
 import Sidebar from "@/views/index/components/sidebar.vue";
 import Logout from "@/views/index/components/logout.vue";
 import ChatBox from "@/views/index/components/chat-box/index.vue";
+import {WS} from "@/utils/websocket";
+import {buildWSUrl} from "@/utils/websocket/build_url.ts";
+import useUserStore from "@/pinia/modules/user";
+const userStore = useUserStore()
+const ws: WS = new WS(buildWSUrl(userStore.authInfo.refreshToken, userStore.userInfo.id))
 </script>
 
 <style scoped lang="scss">

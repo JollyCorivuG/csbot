@@ -44,6 +44,13 @@ public class MsgSendListener {
         AbstractMsgHandler msgHandler = MsgHandlerFactory.getStrategy(msg.getMsgType());
         MsgInfo replyMsg = msgHandler.replyMsg(msg);
 
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName());
+
         // 3.将消息推送到指定的房间
         webSocketService.sendToAssignedRoom(
                 msg.getRoomId(),

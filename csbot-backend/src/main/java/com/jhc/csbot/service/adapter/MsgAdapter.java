@@ -1,5 +1,6 @@
 package com.jhc.csbot.service.adapter;
 
+import com.jhc.csbot.common.constants.SysConstants;
 import com.jhc.csbot.dao.user.UserDao;
 import com.jhc.csbot.model.dto.msg.SendMsgReq;
 import com.jhc.csbot.model.entity.Msg;
@@ -42,7 +43,7 @@ public class MsgAdapter {
         User user = userDao.getUserById(msg.getFromUid());
         return MsgInfo.builder()
                 .id(msg.getId())
-                .senderInfo(UserAdapter.buildUserInfoResp(user))
+                .senderInfo(UserAdapter.buildUserInfoResp(user != null ? user: User.builder().id(SysConstants.CS_BOT_ID).build()))
                 .type(msg.getMsgType())
                 .body(msg.getMsgBody())
                 .sendTime(msg.getCreateTime())

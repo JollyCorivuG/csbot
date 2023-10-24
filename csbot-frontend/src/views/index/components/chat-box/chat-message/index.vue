@@ -22,15 +22,14 @@
         <div class="chat_container">
             <div class="message_container">
                 <a-list :bordered="false" :split="false" scrollbar :max-height="maxChatViewHeight">
-
                     <div class="single_message_container" v-for="(msg, index) in msgStore.msgList" :key="index">
                         <div class="send-time-container" v-if="index == 0 || !isInSameMinute(msgStore.msgList[index - 1].sendTime.toString(), msgStore.msgList[index].sendTime.toString())">
                             {{format(msg.sendTime.toString())}}
                         </div>
                         <div class="other-people-message" v-if="msg.senderInfo.id != userStore.userInfo.id">
-                            <img alt="avatar" :src="msg.senderInfo.avatar" />
+                            <img alt="avatar" src="/logo.svg" />
                             <div class="chat_item_box">
-                                <div class="name">{{msg.senderInfo.nickName}}</div>
+                                <div class="name">Bot</div>
                                 <div class="content">{{msg.body.content}}</div>
                             </div>
                         </div>

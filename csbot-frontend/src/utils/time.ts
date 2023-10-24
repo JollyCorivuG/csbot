@@ -22,3 +22,7 @@ export const isInSameMinute = (t1: string, t2: string): boolean => {
     const d2: Date = new Date(t2)
     return d1.getFullYear() == d2.getFullYear() && d1.getMonth() == d2.getMonth() && d1.getDate() == d2.getDate() && d1.getHours() == d2.getHours() && d1.getMinutes() == d2.getMinutes()
 }
+
+export const convertTimestampToDate = (time: number): Date => {
+    return new Date(time)
+}

@@ -38,9 +38,9 @@ export interface LoginResponse extends CommonResponse {
 // 用户信息
 export interface UserInfo {
     id: number,
-    phone: string,
-    nickName: string,
-    avatar: string
+    phone?: string,
+    nickName?: string,
+    avatar?: string
 }
 
 // 获取当前登录用户信息返回响应
