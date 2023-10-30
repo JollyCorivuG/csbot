@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,37 +49,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/full_stack_project/csbot/csbot-backend/src/main/java/com/jhc/csbot/service/strategy/msg&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d2e6516e1a527b02b7b82086855f3239&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/full_stack_project/csbot/csbot-backend/src/main/java/com/jhc/csbot/service/strategy/msg",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "spring.configuration.checksum": "d2e6516e1a527b02b7b82086855f3239",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;5af18d64-7e8c-4574-9e54-304f6999ba53/schema/\&quot;csbot\&quot;&quot;
+    "RunConfigurationTargetLRU": [
+      "5af18d64-7e8c-4574-9e54-304f6999ba53/schema/\"csbot\""
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\service\strategy\msg" />
@@ -94,7 +96,7 @@
       <recent name="com.jhc.csbot.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InterpreterTest.test">
+  <component name="RunManager" selected="Spring Boot.CsBotApplication">
     <configuration name="csbot.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/sql/csbot.sql" />
       <script-mode>FILE</script-mode>
@@ -180,8 +182,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InterpreterTest.test" />
         <item itemvalue="Spring Boot.CsBotApplication" />
+        <item itemvalue="JUnit.InterpreterTest.test" />
         <item itemvalue="JUnit.JwtUtilsTest.testGenerate" />
         <item itemvalue="JUnit.MsgServiceTest.testInsertMsg" />
         <item itemvalue="JUnit.UserServiceTest.testQueryUser" />
