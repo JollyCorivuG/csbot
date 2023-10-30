@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-interpreter-sdk" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-interpreter-sdk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +227,7 @@
       <workItem from="1698154467314" duration="2797000" />
       <workItem from="1698668050566" duration="67000" />
       <workItem from="1698669560079" duration="458000" />
-      <workItem from="1698670032252" duration="864000" />
+      <workItem from="1698670032252" duration="1201000" />
     </task>
     <servers />
   </component>
