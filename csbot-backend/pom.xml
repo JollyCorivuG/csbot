@@ -118,8 +118,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-    </dependencies>
 
+        <!-- 脚本解释器客户端 -->
+        <dependency>
+            <groupId>com.jhc</groupId>
+            <artifactId>csbot-interpreter-sdk</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/adapter/MsgAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/adapter/MsgAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/MsgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/MsgServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/utils/time.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/utils/time.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -100,12 +94,28 @@
       <recent name="com.jhc.csbot.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CsBotApplication">
+  <component name="RunManager" selected="JUnit.InterpreterTest.test">
     <configuration name="csbot.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/sql/csbot.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="5af18d64-7e8c-4574-9e54-304f6999ba53" namespace="schema/&quot;csbot&quot;" />
       <method v="2" />
+    </configuration>
+    <configuration name="InterpreterTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="csbot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jhc.csbot.interpreter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jhc.csbot.interpreter" />
+      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.interpreter.InterpreterTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="JwtUtilsTest.testGenerate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="csbot" />
@@ -155,22 +165,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.testSaveUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="csbot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jhc.csbot.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jhc.csbot.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testSaveUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CsBotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="csbot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jhc.csbot.CsBotApplication" />
@@ -186,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InterpreterTest.test" />
         <item itemvalue="Spring Boot.CsBotApplication" />
         <item itemvalue="JUnit.JwtUtilsTest.testGenerate" />
         <item itemvalue="JUnit.MsgServiceTest.testInsertMsg" />
         <item itemvalue="JUnit.UserServiceTest.testQueryUser" />
-        <item itemvalue="JUnit.UserServiceTest.testSaveUser" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +225,10 @@
       <workItem from="1697338563039" duration="3000" />
       <workItem from="1697433329205" duration="5597000" />
       <workItem from="1697598084417" duration="5129000" />
-      <workItem from="1698154467314" duration="2515000" />
+      <workItem from="1698154467314" duration="2797000" />
+      <workItem from="1698668050566" duration="67000" />
+      <workItem from="1698669560079" duration="458000" />
+      <workItem from="1698670032252" duration="864000" />
     </task>
     <servers />
   </component>
