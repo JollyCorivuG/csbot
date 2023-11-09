@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/ScriptErrorEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/SyntaxTreeLabelEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jhc/csbot/interpreter/InterpreterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jhc/csbot/interpreter/InterpreterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-interpreter-sdk/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-interpreter-sdk/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-interpreter-sdk/src/main/java/com/jhc/csbot_interpreter_sdk/client/ApiCloudClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-interpreter-sdk/src/main/java/com/jhc/csbot_interpreter_sdk/client/CsBotInterpreterClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-interpreter-sdk/src/main/java/com/jhc/csbot_interpreter_sdk/config/CsBotInterpreterClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-interpreter-sdk/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,40 +60,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/full_stack_project/csbot/csbot-backend/src/main/java/com/jhc/csbot/service/strategy/msg",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "spring.configuration.checksum": "d2e6516e1a527b02b7b82086855f3239",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Downloads/Material_Theme_UI-8.12.6.zip&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d2e6516e1a527b02b7b82086855f3239&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "5af18d64-7e8c-4574-9e54-304f6999ba53/schema/\"csbot\""
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;5af18d64-7e8c-4574-9e54-304f6999ba53/schema/\&quot;csbot\&quot;&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\service\strategy\msg" />
@@ -232,10 +246,20 @@
       <workItem from="1698669560079" duration="458000" />
       <workItem from="1698670032252" duration="1485000" />
       <workItem from="1698671596495" duration="78000" />
+      <workItem from="1698894591838" duration="410000" />
+      <workItem from="1698895039522" duration="1549000" />
+      <workItem from="1698927751027" duration="556000" />
+      <workItem from="1698928322088" duration="373000" />
+      <workItem from="1699518438749" duration="3627000" />
+      <workItem from="1699522510895" duration="13227000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

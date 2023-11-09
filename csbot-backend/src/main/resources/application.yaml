@@ -41,7 +41,6 @@ knife4j:
   enable: true
   setting:
     language: zh_cn
-csbot:
+script:
   interpreter:
-    client:
-      script-url: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script.txt
+    script-path: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\script.txt
