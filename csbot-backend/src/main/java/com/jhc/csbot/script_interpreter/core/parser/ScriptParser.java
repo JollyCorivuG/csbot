@@ -1,14 +1,16 @@
 package com.jhc.csbot.script_interpreter.core.parser;
 
+import com.jhc.csbot.script_interpreter.common.domain.enums.error.ScriptErrorEnum;
 import com.jhc.csbot.script_interpreter.common.domain.enums.SyntaxTreeLabelEnum;
 import com.jhc.csbot.script_interpreter.common.domain.model.SyntaxTree;
 import com.jhc.csbot.script_interpreter.common.domain.model.SyntaxTreeNode;
+import com.jhc.csbot.script_interpreter.common.exception.ScriptException;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Stack;
 
 /**
@@ -22,6 +24,15 @@ import java.util.Stack;
 public class ScriptParser {
     private String scriptPath;
 
+    private SyntaxTreeNode newSyntaxTreeNode(SyntaxTreeLabelEnum label, String lexical, String value) {
+        return SyntaxTreeNode.builder()
+                .label(label)
+                .lexical(lexical)
+                .value(value)
+                .children(new HashMap<>())
+                .build();
+    }
+
     /**
      * 构建语法树
      * @param scriptPath
@@ -33,12 +44,7 @@ public class ScriptParser {
         System.out.println(script);
 
         // 2.得到语法树的根节点
-        SyntaxTreeNode rootNode = SyntaxTreeNode.builder()
-                .label(SyntaxTreeLabelEnum.START_FLAG)
-                .lexical("script")
-                .value(null)
-                .children(new ArrayList<>())
-                .build();
+        SyntaxTreeNode rootNode = newSyntaxTreeNode(SyntaxTreeLabelEnum.START_FLAG, "script", null);
 
         // 3.构建语法树
         int index = 0;
@@ -53,13 +59,14 @@ public class ScriptParser {
                 break;
             }
             index++;
-            SyntaxTreeNode identifierNode = SyntaxTreeNode.builder()
-                    .label(SyntaxTreeLabelEnum.IDENTIFIER)
-                    .lexical(identifier.toString())
-                    .value(null)
-                    .children(new ArrayList<>())
-                    .build();
-            rootNode.getChildren().add(identifierNode);
+
+            SyntaxTreeNode identifierNode;
+            if (rootNode.getChildren().get(identifier.toString()) != null) {
+                identifierNode = rootNode.getChildren().get(identifier.toString());
+            } else {
+                identifierNode = newSyntaxTreeNode(SyntaxTreeLabelEnum.IDENTIFIER, identifier.toString(), null);
+                rootNode.getChildren().put(identifier.toString(), identifierNode);
+            }
 
             // 3.2得到变量名
             StringBuilder variableName = new StringBuilder();
@@ -73,13 +80,13 @@ public class ScriptParser {
                 break;
             }
             index++;
-            SyntaxTreeNode variableNameNode = SyntaxTreeNode.builder()
-                    .label(SyntaxTreeLabelEnum.VARIABLE_NAME)
-                    .lexical(variableName.toString())
-                    .value(null)
-                    .children(new ArrayList<>())
-                    .build();
-            identifierNode.getChildren().add(variableNameNode);
+            SyntaxTreeNode variableNameNode;
+            if (identifierNode.getChildren().get(variableName.toString()) != null) {
+                throw new ScriptException(ScriptErrorEnum.VARIABLE_REPEATED_DEFINITION);
+            } else {
+                variableNameNode = newSyntaxTreeNode(SyntaxTreeLabelEnum.VARIABLE_NAME, variableName.toString(), null);
+                identifierNode.getChildren().put(variableName.toString(), variableNameNode);
+            }
 
             // 3.3得到属性, 属性可能有多个, 因此得循环读取, 每一个属性的格式为 key: value, 以 ; 分隔
             while (index < script.length() && script.charAt(index) != '}') {
@@ -99,6 +106,8 @@ public class ScriptParser {
                 StringBuilder attributeValue = new StringBuilder();
                 Stack<Character> stk = new Stack<>();
                 while ((index < script.length() && script.charAt(index) != ';') || !stk.isEmpty()) {
+                    // TODO 如果 attributeValue 不是空 或者 时空, 但是 script.charAt(index) 不是空
+
                     if (script.charAt(index) != ' ') {
                         if (script.charAt(index) == '{') {
                             stk.push('{');
@@ -118,13 +127,13 @@ public class ScriptParser {
                     break;
                 }
                 index++;
-                SyntaxTreeNode attributeNode = SyntaxTreeNode.builder()
-                        .label(SyntaxTreeLabelEnum.ATTRIBUTE)
-                        .lexical(attributeKey.toString())
-                        .value(attributeValue.toString())
-                        .children(new ArrayList<>())
-                        .build();
-                variableNameNode.getChildren().add(attributeNode);
+                if (variableNameNode.getChildren().get(attributeKey.toString()) != null) {
+                    // 属性重复, 报错
+                    throw new ScriptException(ScriptErrorEnum.ATTRIBUTE_REPEATED_DEFINITION);
+                } else {
+                    SyntaxTreeNode attributeNode = newSyntaxTreeNode(SyntaxTreeLabelEnum.ATTRIBUTE, attributeKey.toString(), attributeValue.toString());
+                    variableNameNode.getChildren().put(attributeKey.toString(), attributeNode);
+                }
                 if (index < script.length() && script.charAt(index) == ' ') {
                     index++;
                 }
@@ -143,6 +152,11 @@ public class ScriptParser {
     public void init() {
         // 1.读取脚本文件并构建语法树
         SyntaxTreeNode syntaxTree = buildSyntaxTree(scriptPath);
+        log.info("语法树构建完成, 其结构如下: ");
         SyntaxTree.showTotalInfo(syntaxTree);
+
+        // 2.对语法树进行初步的语法检查
+        SyntaxTree.check(syntaxTree);
+        log.info("语法树初步语法检查通过");
     }
 }

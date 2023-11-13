@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.Map;
 
 /**
  * @Description: 语法树节点
@@ -21,5 +21,5 @@ public class SyntaxTreeNode {
     private SyntaxTreeLabelEnum label; // 节点的标签
     private String lexical; // 节点的词汇
     private String value; // 节点的值, 只有当标签为属性时才有值
-    private List<SyntaxTreeNode> children; // 子节点
+    private Map<String, SyntaxTreeNode> children; // 子节点, key 为词汇, value 为节点
 }

@@ -1,6 +1,7 @@
 package com.jhc.csbot.script_interpreter.common.exception;
 
-import com.jhc.csbot.script_interpreter.common.domain.enums.ScriptErrorEnum;
+import com.jhc.csbot.script_interpreter.common.domain.enums.error.LexicalErrorEnum;
+import com.jhc.csbot.script_interpreter.common.domain.enums.error.ScriptErrorEnum;
 import lombok.Getter;
 
 /**
@@ -17,8 +18,19 @@ public class ScriptException extends RuntimeException {
         this.code = error.getCode();
     }
 
+    public ScriptException(LexicalErrorEnum error) {
+        super(error.getMessage());
+        this.code = error.getCode();
+    }
+
     public ScriptException(ScriptErrorEnum error, String message) {
         super(message);
         this.code = error.getCode();
     }
+
+    public ScriptException(LexicalErrorEnum error, String message) {
+        super(message);
+        this.code = error.getCode();
+    }
+
 }

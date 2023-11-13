@@ -1,10 +1,14 @@
+// user
 env user {
     package_name: "com.jhc.csbot.model.entity";
     class_name: "User";
 }
 
+/*
+    全局变量
+*/
 global i {
-    type: "int";
+    type: "int"; // int, string
     value: 1;
 }
 
@@ -22,9 +26,9 @@ query 账单 {
 }
 
 intent 问候 {
-    pattern: "^[A-Za-z]+$", "^[A-Z]+$", "^[a-z]+$";
-    include: "你好", "您好";
-    priority: min;
+    pattern: ["^[A-Za-z]+$", "^[A-Z]+$", "^[a-z]+$"];
+    include: ["你好", "您好"];
+    priority: -2321312;
     action: 执行问候;
 }
 
@@ -39,8 +43,9 @@ action 查询账单 {
 }
 
 status 欢迎 {
+    init: true;
     speak: "您好！请问有什么可以帮助您吗?";
-    option: {
+    option: [{
         input: "1";
         text: "查询账单";
         intent: 查账单;
@@ -48,6 +53,5 @@ status 欢迎 {
         input: "2";
         text: "查余额";
         intent: 查余额;
-    };
-    timeout: 10, 未说话;
+    }];
 }

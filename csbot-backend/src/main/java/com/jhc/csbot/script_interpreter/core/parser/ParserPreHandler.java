@@ -1,6 +1,6 @@
 package com.jhc.csbot.script_interpreter.core.parser;
 
-import com.jhc.csbot.script_interpreter.common.domain.enums.ScriptErrorEnum;
+import com.jhc.csbot.script_interpreter.common.domain.enums.error.ScriptErrorEnum;
 import com.jhc.csbot.script_interpreter.common.exception.ScriptException;
 import lombok.extern.slf4j.Slf4j;
 
