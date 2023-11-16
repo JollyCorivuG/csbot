@@ -1,6 +1,6 @@
-package com.jhc.csbot.script_interpreter.common.domain.model;
+package com.jhc.csbot.script_interpreter.common.domain.model.syntax;
 
-import com.jhc.csbot.script_interpreter.common.domain.enums.SyntaxTreeLabelEnum;
+import com.jhc.csbot.script_interpreter.common.domain.model.lexical.LexicalToken;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,8 +18,11 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SyntaxTreeNode {
-    private SyntaxTreeLabelEnum label; // 节点的标签
-    private String lexical; // 节点的词汇
-    private String value; // 节点的值, 只有当标签为属性时才有值
+    private LexicalToken token;
     private Map<String, SyntaxTreeNode> children; // 子节点, key 为词汇, value 为节点
+
+    /**
+     * 额外的信息
+     */
+    private Boolean leftPartOfOperator; // 是否为运算符的左部
 }

@@ -2,6 +2,7 @@ package com.jhc.csbot.script_interpreter.utils;
 
 import com.jhc.csbot.script_interpreter.common.domain.enums.error.LexicalErrorEnum;
 import com.jhc.csbot.script_interpreter.common.domain.enums.error.ScriptErrorEnum;
+import com.jhc.csbot.script_interpreter.common.domain.enums.error.SyntaxErrorEnum;
 import com.jhc.csbot.script_interpreter.common.exception.ScriptException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,6 +28,15 @@ public class ErrorUtils {
     }
     public static void declareLexicalError(LexicalErrorEnum error, Integer line) {
         log.error("Lexical Error: [{}] at line {}", error.getMessage(), line);
+        throw new ScriptException(error);
+    }
+
+    public static void declareSyntaxError(SyntaxErrorEnum error, Integer line, String errorMsg) {
+        log.error("Syntax Error: [{}] at line {}", errorMsg, line);
+        throw new ScriptException(error, errorMsg);
+    }
+    public static void declareSyntaxError(SyntaxErrorEnum error, Integer line) {
+        log.error("Syntax Error: [{}] at line {}", error.getMessage(), line);
         throw new ScriptException(error);
     }
 

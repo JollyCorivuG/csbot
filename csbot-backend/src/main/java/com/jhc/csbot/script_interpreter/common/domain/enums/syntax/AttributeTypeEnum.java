@@ -1,4 +1,4 @@
-package com.jhc.csbot.script_interpreter.common.domain.enums;
+package com.jhc.csbot.script_interpreter.common.domain.enums.syntax;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

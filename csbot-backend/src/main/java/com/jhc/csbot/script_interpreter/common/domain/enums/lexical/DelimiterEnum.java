@@ -21,6 +21,7 @@ public enum DelimiterEnum {
     LEFT_MIDDLE_BRACKET("[", "左中括号"),
     RIGHT_MIDDLE_BRACKET("]", "右中括号"),
     END_OF_STATEMENT(";", "语句结束符"),
+    COLON(":", "冒号"),
     COMMA(",", "逗号"),
     ;
 

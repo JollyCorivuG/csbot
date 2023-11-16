@@ -5,17 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/lexical/TokenTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/AttributeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/ScriptErrorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/ScriptErrorEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/SyntaxTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/SyntaxTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/SyntaxTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/SyntaxTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/AttributeTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/syntax/AttributeTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/SyntaxTreeLabelEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/LexicalErrorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/LexicalErrorEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/ScriptErrorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/ScriptErrorEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/SyntaxErrorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/SyntaxErrorEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/lexical/DelimiterEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/lexical/DelimiterEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/AttributeField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/AttributeField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/SyntaxTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/SyntaxTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/exception/ScriptException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/exception/ScriptException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/ScriptInterpreterCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/ScriptInterpreterCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ParserPreHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ParserPreHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/lexer/ScriptLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/lexer/ScriptLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ParserPreHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ScriptParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ScriptParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/keyword/AbstractIdentifierHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/keyword/ActionIdentifierHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/keyword/EnvIdentifierHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/keyword/GlobalIdentifierHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/keyword/IntentIdentifierHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/keyword/KeywordHandlerFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/keyword/QueryIdentifierHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/keyword/StatusIdentifierHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/label/AbstractLabelHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/label/AttributeLabelHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/label/KeywordLabelHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/label/LabelHandlerFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/handler/label/VariableLabelHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/script.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/StringUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/AttributeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/AttributeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/ErrorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/ErrorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/LexicalUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/LexicalUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +125,7 @@
       <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jhc.csbot.script_interpreter.core.parser.strategy.checker" />
       <recent name="com.jhc.csbot.script_interpreter.core.parser.handler.identifier" />
       <recent name="com.jhc.csbot.script_interpreter.core.parser.strategy.label" />
       <recent name="com.jhc.csbot.model.vo.auth" />
@@ -255,7 +276,10 @@
       <workItem from="1699522510895" duration="13271000" />
       <workItem from="1699580808436" duration="13880000" />
       <workItem from="1699687367856" duration="25000" />
-      <workItem from="1699860120236" duration="12324000" />
+      <workItem from="1699860120236" duration="12531000" />
+      <workItem from="1699959998986" duration="4012000" />
+      <workItem from="1700013900426" duration="21785000" />
+      <workItem from="1700099862155" duration="9722000" />
     </task>
     <servers />
   </component>

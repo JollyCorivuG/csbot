@@ -1,6 +1,6 @@
-package com.jhc.csbot.script_interpreter.common.domain.model;
+package com.jhc.csbot.script_interpreter.common.domain.model.syntax;
 
-import com.jhc.csbot.script_interpreter.common.domain.enums.AttributeTypeEnum;
+import com.jhc.csbot.script_interpreter.common.domain.enums.syntax.AttributeTypeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

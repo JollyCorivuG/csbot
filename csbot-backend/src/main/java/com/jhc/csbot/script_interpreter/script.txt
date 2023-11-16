@@ -29,17 +29,17 @@ intent 问候 {
     pattern: ["^[A-Za-z]+$", "^[A-Z]+$", "^[a-z]+$"];
     include: ["你好", "您好"];
     priority: -2321312;
-    action: 执行问候;
+    exec_action: 执行问候;
 }
 
 action 执行问候 {
     reply: "你好！很高兴为您服务";
-    after_status: 常规;
+    after_status: 欢迎;
 }
 
 action 查询账单 {
     reply: "你的账单是${账单}元, ${user.nickName}";
-    after_status: 常规;
+    after_status: 欢迎;
 }
 
 status 欢迎 {
@@ -48,10 +48,10 @@ status 欢迎 {
     option: [{
         input: "1";
         text: "查询账单";
-        intent: 查账单;
+        purpose: 问候;
     }, {
         input: "2";
         text: "查余额";
-        intent: 查余额;
+        purpose: 问候;
     }];
 }

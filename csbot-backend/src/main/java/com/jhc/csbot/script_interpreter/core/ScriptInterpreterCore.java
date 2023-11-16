@@ -1,6 +1,7 @@
 package com.jhc.csbot.script_interpreter.core;
 
 import com.jhc.csbot.script_interpreter.core.lexer.ScriptLexer;
+import com.jhc.csbot.script_interpreter.core.parser.ScriptParser;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +21,11 @@ public class ScriptInterpreterCore {
     @Bean
     public ScriptLexer scriptLexer() {
         return new ScriptLexer(scriptPath);
+    }
+
+    @Bean
+    public ScriptParser scriptParser() {
+        return new ScriptParser(scriptLexer().getTokenStream());
     }
 
 }

@@ -13,6 +13,7 @@ import lombok.Getter;
 public enum LexicalErrorEnum {
     UNKNOWN_SYMBOL(10000, "未知的符号"),
     INVALID_IDENTIFIER_NAME(20000, "不合法的标识符名称"),
+    UNCLOSED_STRING(30000, "未闭合的字符串"),
     ;
 
     private final Integer code;

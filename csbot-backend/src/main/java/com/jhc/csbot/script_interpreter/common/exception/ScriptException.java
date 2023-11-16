@@ -2,6 +2,7 @@ package com.jhc.csbot.script_interpreter.common.exception;
 
 import com.jhc.csbot.script_interpreter.common.domain.enums.error.LexicalErrorEnum;
 import com.jhc.csbot.script_interpreter.common.domain.enums.error.ScriptErrorEnum;
+import com.jhc.csbot.script_interpreter.common.domain.enums.error.SyntaxErrorEnum;
 import lombok.Getter;
 
 /**
@@ -23,6 +24,11 @@ public class ScriptException extends RuntimeException {
         this.code = error.getCode();
     }
 
+    public ScriptException(SyntaxErrorEnum error) {
+        super(error.getMessage());
+        this.code = error.getCode();
+    }
+
     public ScriptException(ScriptErrorEnum error, String message) {
         super(message);
         this.code = error.getCode();
@@ -33,4 +39,8 @@ public class ScriptException extends RuntimeException {
         this.code = error.getCode();
     }
 
+    public ScriptException(SyntaxErrorEnum error, String errorMsg) {
+        super(errorMsg);
+        this.code = error.getCode();
+    }
 }

@@ -25,7 +25,7 @@ public enum ScriptErrorEnum {
     FILE_READ_ERROR(40001, "脚本文件读取错误"),
     FILE_CLOSE_ERROR(40002, "脚本文件关闭错误"),
     SYNTAX_TREE_ERROR(50000, "语法树错误"),
-    IDENTIFIER_NOT_FOUND(60000, "未知的标识符"),
+    KEYWORD_NOT_FOUND(60000, "未知的关键字"),
     ;
 
     private final Integer code;
