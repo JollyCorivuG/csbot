@@ -1,5 +1,6 @@
 package com.jhc.csbot.script_interpreter.core;
 
+import com.jhc.csbot.script_interpreter.core.interpreter.ScriptInterpreter;
 import com.jhc.csbot.script_interpreter.core.lexer.ScriptLexer;
 import com.jhc.csbot.script_interpreter.core.parser.ScriptParser;
 import lombok.Data;
@@ -26,6 +27,11 @@ public class ScriptInterpreterCore {
     @Bean
     public ScriptParser scriptParser() {
         return new ScriptParser(scriptLexer().getTokenStream());
+    }
+
+    @Bean
+    public ScriptInterpreter scriptInterpreter() {
+        return new ScriptInterpreter(scriptParser().getSyntaxTree());
     }
 
 }

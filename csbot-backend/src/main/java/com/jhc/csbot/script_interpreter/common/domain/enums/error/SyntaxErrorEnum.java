@@ -26,6 +26,7 @@ public enum SyntaxErrorEnum {
     ARRAY_EMPTY(50002, "数组为空"),
     ARRAY_TYPE_NOT_SUPPORTED(50003, "不支持的数组类型"),
     OBJECT_EMPTY(60000, "对象为空"),
+    NOT_SUPPORT_USE(70000, "不支持的用法"),
     ;
     private final Integer code;
     private final String message;

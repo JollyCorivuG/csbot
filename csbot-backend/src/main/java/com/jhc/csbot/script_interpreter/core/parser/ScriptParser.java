@@ -6,6 +6,7 @@ import com.jhc.csbot.script_interpreter.core.parser.modules.SyntaxChecker;
 import com.jhc.csbot.script_interpreter.core.parser.modules.SyntaxTreeBuilder;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,18 +20,23 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Slf4j
+@Data
 public class ScriptParser {
     private List<LexicalToken> tokenStream; // token stream 流
+    private SyntaxTreeInfo syntaxTree;
+
+    public ScriptParser(List<LexicalToken> tokenStream) {
+        this.tokenStream = tokenStream;
+    }
 
     @PostConstruct
     public void init() {
         // 1.根据 token 流构建语法树
-        SyntaxTreeInfo treeInfo = SyntaxTreeBuilder.exec(tokenStream);
+        this.syntaxTree = SyntaxTreeBuilder.exec(tokenStream);
         log.info("语法树构建完成");
-        treeInfo.showTotalInfo();
 
         // 2.对语法树进行语法检查
-        SyntaxChecker.exec(treeInfo);
+        SyntaxChecker.exec(this.syntaxTree);
         log.info("语法检查完成");
     }
 }

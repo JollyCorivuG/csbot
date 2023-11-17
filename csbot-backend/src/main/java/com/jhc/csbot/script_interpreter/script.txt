@@ -14,9 +14,10 @@ global i {
 
 global 打招呼 {
     type: "string";
-    value: "111";
+    value: "你好";
 }
 
+// select 账单 from user where user_id = 3123123
 query 账单 {
     table: "user";
     filters: {
@@ -32,14 +33,21 @@ intent 问候 {
     exec_action: 执行问候;
 }
 
+intent 查账单 {
+    pattern: ["^[A-Za-z]+$", "^[A-Z]+$", "^[a-z]+$"];
+    include: ["账单"];
+    priority: 23423;
+    exec_action: 查询账单;
+}
+
 action 执行问候 {
     reply: "你好！很高兴为您服务";
-    after_status: 欢迎;
+    after_status: 常规;
 }
 
 action 查询账单 {
     reply: "你的账单是${账单}元, ${user.nickName}";
-    after_status: 欢迎;
+    after_status: 常规;
 }
 
 status 欢迎 {
@@ -55,3 +63,12 @@ status 欢迎 {
         purpose: 问候;
     }];
 }
+
+status 常规 {
+    init: false;
+}
+
+
+
+
+

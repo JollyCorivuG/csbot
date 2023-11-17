@@ -92,13 +92,10 @@ public class SyntaxTreeBuilder {
                 // 如果是标识符, 则作为变量
                 index++;
                 if (index == tokenStream.size()) {
-                    ErrorUtils.declareSyntaxError(SyntaxErrorEnum.NO_COMPLETE_STATEMENT, tokenStream.get(index - 1).getLine(), "不完整的语句");
+                    ErrorUtils.declareSyntaxError(SyntaxErrorEnum.NO_COMPLETE_STATEMENT, tokenStream.get(index - 1).getLine(), "不完整的语句, 缺少语句结束符分号");
                 }
                 LexicalToken nxtNxtToken = tokenStream.get(index);
-                if (nxtNxtToken.getType() == TokenTypeEnum.DELIMITER && nxtNxtToken.getValue().equals(DelimiterEnum.END_OF_STATEMENT.getDelimiter())) {
-                    index--;
-                    attributeNameNode.getChildren().put(nxtToken.getValue(), newNode(nxtToken, false));
-                } else if (nxtNxtToken.getType() == TokenTypeEnum.OPERATOR) {
+                if (nxtNxtToken.getType() == TokenTypeEnum.OPERATOR) {
                     attributeNameNode.getChildren().put(nxtToken.getValue(), newNode(nxtToken, true));
                     attributeNameNode.getChildren().put(nxtNxtToken.getValue(), newNode(nxtNxtToken));
                     index++;
@@ -111,6 +108,9 @@ public class SyntaxTreeBuilder {
                     } else {
                         ErrorUtils.declareSyntaxError(SyntaxErrorEnum.UNEXPECTED_TOKEN, nxtNxtNxtToken.getLine(), "运算符右边不是预期的词法, " + nxtNxtNxtToken.getValue() + " 不是标识符");
                     }
+                } else {
+                    index--;
+                    attributeNameNode.getChildren().put(nxtToken.getValue(), newNode(nxtToken, false));
                 }
             } else {
                 ErrorUtils.declareSyntaxError(SyntaxErrorEnum.ATTRIBUTE_NOT_FOUND, nxtToken.getLine(), "对象出现未知的属性, 对象不能嵌套对象、数组等");
@@ -118,7 +118,7 @@ public class SyntaxTreeBuilder {
 
             index++;
             if (index == tokenStream.size()) {
-                ErrorUtils.declareSyntaxError(SyntaxErrorEnum.NO_COMPLETE_STATEMENT, tokenStream.get(index - 1).getLine(), "不完整的语句");
+                ErrorUtils.declareSyntaxError(SyntaxErrorEnum.NO_COMPLETE_STATEMENT, tokenStream.get(index - 1).getLine(), "不完整的语句, 缺少语句结束符分号");
             }
             LexicalToken endToken = tokenStream.get(index);
             if (endToken.getType() != TokenTypeEnum.DELIMITER || !endToken.getValue().equals(DelimiterEnum.END_OF_STATEMENT.getDelimiter())) {
@@ -218,10 +218,7 @@ public class SyntaxTreeBuilder {
                         ErrorUtils.declareSyntaxError(SyntaxErrorEnum.NO_COMPLETE_STATEMENT, keywordToken.getLine(), "不完整的语句");
                     }
                     LexicalToken nxtNxtToken = tokenStream.get(index);
-                    if (nxtNxtToken.getType() == TokenTypeEnum.DELIMITER && nxtNxtToken.getValue().equals(DelimiterEnum.END_OF_STATEMENT.getDelimiter())) {
-                        attributeNameNode.getChildren().put(nxtToken.getValue(), newNode(nxtToken, false));
-                        index--;
-                    } else if (nxtNxtToken.getType() == TokenTypeEnum.OPERATOR) {
+                    if (nxtNxtToken.getType() == TokenTypeEnum.OPERATOR) {
                         attributeNameNode.getChildren().put(nxtToken.getValue(), newNode(nxtToken, true));
                         attributeNameNode.getChildren().put(nxtNxtToken.getValue(), newNode(nxtNxtToken));
                         index++;
@@ -234,6 +231,9 @@ public class SyntaxTreeBuilder {
                         } else {
                             ErrorUtils.declareSyntaxError(SyntaxErrorEnum.UNEXPECTED_TOKEN, nxtNxtNxtToken.getLine(), "运算符右边不是预期的词法, " + nxtNxtNxtToken.getValue() + " 不是标识符");
                         }
+                    } else {
+                        attributeNameNode.getChildren().put(nxtToken.getValue(), newNode(nxtToken, false));
+                        index--;
                     }
                 } else if (nxtToken.getType() == TokenTypeEnum.DELIMITER && nxtToken.getValue().equals(DelimiterEnum.LEFT_BRACE.getDelimiter())) {
                     // 如果是左括号, 则视为一个对象
