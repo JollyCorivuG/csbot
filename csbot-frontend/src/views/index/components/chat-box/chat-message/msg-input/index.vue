@@ -35,6 +35,7 @@ const sendMsg = async () => {
     }
     msg.value = ''
     msgStore.msgList.push(resp.data)
+    msgStore.scrollerFlag = msgStore.scrollerFlag == 0 ? 1 : 0
 }
 
 </script>

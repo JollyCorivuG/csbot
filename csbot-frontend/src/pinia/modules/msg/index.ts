@@ -4,7 +4,8 @@ import {MsgState} from "@/pinia/modules/msg/type.ts";
 const useMsgStore = defineStore('Msg', {
     state: (): MsgState => {
         return {
-            msgList: []
+            msgList: [],
+            scrollerFlag: 0
         }
     },
     getters: {

@@ -4,7 +4,6 @@ package com.jhc.csbot.service.strategy.msg;
 import com.jhc.csbot.model.dto.msg.SendMsgReq;
 import com.jhc.csbot.model.entity.Msg;
 import com.jhc.csbot.model.enums.msg.MsgTypeEnum;
-import com.jhc.csbot.model.vo.msg.MsgInfo;
 import jakarta.annotation.PostConstruct;
 
 /**
@@ -32,5 +31,5 @@ public abstract class AbstractMsgHandler {
      * @param msg
      * @return
      */
-    public abstract MsgInfo replyMsg(Msg msg);
+    public abstract void replyMsg(Msg msg);
 }

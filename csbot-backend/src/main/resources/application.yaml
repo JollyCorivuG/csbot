@@ -37,6 +37,8 @@ mybatis-plus:
   type-aliases-package: com.jhc.csbot.model.entity
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    enable-sql-runner: true
 knife4j:
   enable: true
   setting:

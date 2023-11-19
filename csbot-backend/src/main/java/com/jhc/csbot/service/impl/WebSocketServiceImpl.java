@@ -5,6 +5,7 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import com.jhc.csbot.model.dto.ws_msg.WSMsgResp;
 import com.jhc.csbot.model.enums.ws_msg.WSMsgRespTypeEnum;
+import com.jhc.csbot.script_interpreter.core.interpreter.environment.UsersState;
 import com.jhc.csbot.service.IWebSocketService;
 import com.jhc.csbot.utils.JwtUtils;
 import com.jhc.csbot.websocket.NettyUtils;
@@ -76,6 +77,9 @@ public class WebSocketServiceImpl implements IWebSocketService {
         }
         ROOM_CHANNEL_MAP.get(roomId).add(channel);
         ONLINE_USER_SET.add(NettyUtils.getAttr(channel, NettyUtils.UID));
+
+        // 初始化脚本解释器的用户状态
+        UsersState.init(NettyUtils.getAttr(channel, NettyUtils.UID));
     }
 
     @Override
@@ -84,6 +88,9 @@ public class WebSocketServiceImpl implements IWebSocketService {
         if (ROOM_CHANNEL_MAP.containsKey(roomId)) {
             ROOM_CHANNEL_MAP.get(roomId).remove(channel);
             ONLINE_USER_SET.remove(NettyUtils.getAttr(channel, NettyUtils.UID));
+
+            // 删除脚本解释器的用户状态
+            UsersState.exit(NettyUtils.getAttr(channel, NettyUtils.UID));
         }
     }
 

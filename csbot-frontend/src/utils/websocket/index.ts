@@ -35,6 +35,7 @@ export class WS {
             const receiveMsg: MsgInfo = resp.data as MsgInfo
             receiveMsg.sendTime = new Date(receiveMsg.sendTime)
             msgStore.msgList.push(receiveMsg)
+            msgStore.scrollerFlag = msgStore.scrollerFlag == 0 ? 1 : 0
             console.log(msgStore.msgList)
         }
     }

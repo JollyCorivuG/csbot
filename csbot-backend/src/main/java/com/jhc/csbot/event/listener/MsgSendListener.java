@@ -1,10 +1,7 @@
 package com.jhc.csbot.event.listener;
 
 import com.jhc.csbot.event.MsgSendEvent;
-import com.jhc.csbot.model.dto.ws_msg.WSMsgResp;
 import com.jhc.csbot.model.entity.Msg;
-import com.jhc.csbot.model.enums.ws_msg.WSMsgRespTypeEnum;
-import com.jhc.csbot.model.vo.msg.MsgInfo;
 import com.jhc.csbot.service.IMsgService;
 import com.jhc.csbot.service.IWebSocketService;
 import com.jhc.csbot.service.strategy.msg.AbstractMsgHandler;
@@ -41,21 +38,12 @@ public class MsgSendListener {
         Msg msg = msgService.getMsgById(event.getMsgId());
 
         // 2.得到客服机器人回复的消息
-        AbstractMsgHandler msgHandler = MsgHandlerFactory.getStrategy(msg.getMsgType());
-        MsgInfo replyMsg = msgHandler.replyMsg(msg);
-
         try {
-            Thread.sleep(1000);
+            Thread.sleep(300);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(Thread.currentThread().getName());
-
-        // 3.将消息推送到指定的房间
-        webSocketService.sendToAssignedRoom(
-                msg.getRoomId(),
-                WSMsgResp.builder().type(WSMsgRespTypeEnum.MESSAGE.getType()).data(replyMsg).build(),
-                replyMsg.getSenderInfo().getId()
-        );
+        AbstractMsgHandler msgHandler = MsgHandlerFactory.getStrategy(msg.getMsgType());
+        msgHandler.replyMsg(msg);
     }
 }

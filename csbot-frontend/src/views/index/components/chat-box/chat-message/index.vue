@@ -21,27 +21,29 @@
         </div>
         <div class="chat_container">
             <div class="message_container">
-                <a-list :bordered="false" :split="false" scrollbar :max-height="maxChatViewHeight">
-                    <div class="single_message_container" v-for="(msg, index) in msgStore.msgList" :key="index">
-                        <div class="send-time-container" v-if="index == 0 || !isInSameMinute(msgStore.msgList[index - 1].sendTime.toString(), msgStore.msgList[index].sendTime.toString())">
-                            {{format(msg.sendTime.toString())}}
-                        </div>
-                        <div class="other-people-message" v-if="msg.senderInfo.id != userStore.userInfo.id">
-                            <img alt="avatar" src="/logo.svg" />
-                            <div class="chat_item_box">
-                                <div class="name">Bot</div>
-                                <div class="content">{{msg.body.content}}</div>
+                <a-scrollbar :style="scrollBarStyle" ref="messagePanel">
+                    <div class="total" style="scroll-behavior: smooth">
+                        <div class="single_message_container" v-for="(msg, index) in msgStore.msgList" :key="index">
+                            <div class="send-time-container" v-if="index == 0 || !isInSameMinute(msgStore.msgList[index - 1].sendTime.toString(), msgStore.msgList[index].sendTime.toString())">
+                                {{format(msg.sendTime.toString())}}
                             </div>
-                        </div>
-                        <div class="self-message" v-else>
-                            <div class="chat_item_box">
-                                <div class="name">{{msg.senderInfo.nickName}}</div>
-                                <div class="content">{{msg.body.content}}</div>
+                            <div class="other-people-message" v-if="msg.senderInfo.id != userStore.userInfo.id">
+                                <img alt="avatar" src="/logo.svg" />
+                                <div class="chat_item_box">
+                                    <div class="name">Bot</div>
+                                    <div class="content">{{msg.body.content}}</div>
+                                </div>
                             </div>
-                            <img alt="avatar" :src="msg.senderInfo.avatar" />
+                            <div class="self-message" v-else>
+                                <div class="chat_item_box">
+                                    <div class="name">{{msg.senderInfo.nickName}}</div>
+                                    <div class="content">{{msg.body.content}}</div>
+                                </div>
+                                <img alt="avatar" :src="msg.senderInfo.avatar" />
+                            </div>
                         </div>
                     </div>
-                </a-list>
+                </a-scrollbar>
             </div>
             <div class="input">
                 <MsgInput />
@@ -52,21 +54,42 @@
 
 <script setup lang="ts">
 import MsgInput from "@/views/index/components/chat-box/chat-message/msg-input/index.vue";
-import {onMounted, ref} from "vue";
+import {nextTick, onMounted, ref, watch} from "vue";
 import useMsgStore from "@/pinia/modules/msg";
 import useUserStore from "@/pinia/modules/user";
 import {format, isInSameMinute} from "@/utils/time.ts";
+import {ScrollbarInstance} from "@arco-design/web-vue";
 
 // 聊天框的最大高度
+const scrollBarStyle = ref<object>(
+    {
+        height: '0px',
+        overflow: 'auto'
+    }
+)
 const maxChatViewHeight = ref<number>(0)
 onMounted(() => {
     const messageContainer = document.querySelector('.message_container')
     maxChatViewHeight.value = messageContainer?.clientHeight as number - 8
+    scrollBarStyle.value = {
+        height: maxChatViewHeight.value + 'px',
+        overflow: 'auto'
+    }
 })
 
 // 消息列表
 const msgStore = useMsgStore()
 const userStore = useUserStore()
+
+// 监视 msgStore.scrollerFlag 的变化, 如果发生变化就滚动到底部
+const messagePanel = ref<ScrollbarInstance>()
+watch(() => msgStore.scrollerFlag, async (newVal, oldVal) => {
+    if (newVal != oldVal) {
+        await nextTick(() => {
+            messagePanel.value?.scrollTop(1000000000)
+        })
+    }
+})
 </script>
 
 <style scoped lang="scss">
@@ -138,7 +161,7 @@ const userStore = useUserStore()
             flex: 1;
             max-height: calc(100% - 40px);
             .single_message_container {
-                margin: 8px 16px;
+                margin: 20px 16px;
                 display: flex;
                 flex-direction: column;
                 color: white;

@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/exclusive/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/SyntaxErrorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/enums/error/SyntaxErrorEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/ScriptInterpreterCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/ScriptInterpreterCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ScriptParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ScriptParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/modules/SyntaxTreeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/modules/SyntaxTreeBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/WebSocketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/WebSocketServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/AbstractMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/AbstractMsgHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/TextMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/TextMsgHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/msg/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/msg/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/msg/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/msg/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/utils/websocket/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/utils/websocket/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,17 +167,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.testQueryUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReplyConvertTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="csbot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jhc.csbot.service.*" />
+          <option name="PATTERN" value="com.jhc.csbot.interpreter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jhc.csbot.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testQueryUser" />
+      <option name="PACKAGE_NAME" value="com.jhc.csbot.interpreter" />
+      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.interpreter.ReplyConvertTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -194,10 +199,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.CsBotApplication" />
+        <item itemvalue="JUnit.ReplyConvertTest.test" />
         <item itemvalue="JUnit.InterpreterTest.test" />
         <item itemvalue="JUnit.JwtUtilsTest.testGenerate" />
         <item itemvalue="JUnit.MsgServiceTest.testInsertMsg" />
-        <item itemvalue="JUnit.UserServiceTest.testQueryUser" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +262,10 @@
       <workItem from="1700099862155" duration="9753000" />
       <workItem from="1700126271767" duration="869000" />
       <workItem from="1700132637999" duration="986000" />
-      <workItem from="1700185157785" duration="16876000" />
+      <workItem from="1700185157785" duration="16902000" />
+      <workItem from="1700271546964" duration="4340000" />
+      <workItem from="1700306182249" duration="4248000" />
+      <workItem from="1700360938799" duration="620000" />
     </task>
     <servers />
   </component>

@@ -4,40 +4,30 @@ env user {
     class_name: "User";
 }
 
-/*
-    全局变量
-*/
-global i {
-    type: "int"; // int, string
-    value: 1;
-}
-
 global 打招呼 {
     type: "string";
-    value: "你好";
+    value: "您好";
 }
 
 // select 账单 from user where user_id = 3123123
-query 账单 {
+query 头像地址 {
     table: "user";
     filters: {
-        user_id: user.id;
+        id: user.id;
     };
-    field: "账单";
+    field: "avatar";
 }
 
 intent 问候 {
-    pattern: ["^[A-Za-z]+$", "^[A-Z]+$", "^[a-z]+$"];
     include: ["你好", "您好"];
-    priority: -2321312;
+    priority: -1;
     exec_action: 执行问候;
 }
 
-intent 查账单 {
-    pattern: ["^[A-Za-z]+$", "^[A-Z]+$", "^[a-z]+$"];
-    include: ["账单"];
-    priority: 23423;
-    exec_action: 查询账单;
+intent 查头像 {
+    include: ["头像", "照片"];
+    priority: 1;
+    exec_action: 执行查头像;
 }
 
 action 执行问候 {
@@ -45,22 +35,18 @@ action 执行问候 {
     after_status: 常规;
 }
 
-action 查询账单 {
-    reply: "你的账单是${账单}元, ${user.nickName}";
+action 执行查头像 {
+    reply: "您的头像地址是：${头像地址}";
     after_status: 常规;
 }
 
 status 欢迎 {
     init: true;
-    speak: "您好！请问有什么可以帮助您吗?";
+    speak: "${user.nickName}, ${打招呼}！请问有什么可以帮助您吗?";
     option: [{
         input: "1";
-        text: "查询账单";
-        purpose: 问候;
-    }, {
-        input: "2";
-        text: "查余额";
-        purpose: 问候;
+        text: "查头像";
+        purpose: 查头像;
     }];
 }
 
