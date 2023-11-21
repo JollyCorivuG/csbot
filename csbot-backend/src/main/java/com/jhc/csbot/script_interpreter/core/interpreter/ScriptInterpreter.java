@@ -1,7 +1,6 @@
 package com.jhc.csbot.script_interpreter.core.interpreter;
 
 import com.jhc.csbot.script_interpreter.common.domain.model.syntax.SyntaxTreeInfo;
-import com.jhc.csbot.script_interpreter.core.interpreter.environment.VariableTable;
 import com.jhc.csbot.script_interpreter.core.interpreter.modules.VariableClassifier;
 import com.jhc.csbot.script_interpreter.core.interpreter.modules.VariableTableBuilder;
 import jakarta.annotation.PostConstruct;
@@ -29,8 +28,6 @@ public class ScriptInterpreter {
 
         // 2.将变量表分类
         VariableClassifier.exec();
-        System.out.println(VariableTable.intents);
-        System.out.println(VariableTable.initStatus);
     }
 
 }

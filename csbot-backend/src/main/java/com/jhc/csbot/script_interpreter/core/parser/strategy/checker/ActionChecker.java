@@ -23,6 +23,11 @@ import java.util.Set;
 public class ActionChecker extends AbstractKeywordChecker {
     private final List<AttributeField> attributes = Arrays.asList(
             AttributeField.builder()
+                    .name("default")
+                    .validTypes(List.of(AttributeTypeEnum.BOOLEAN))
+                    .isRequired(true)
+                    .build(),
+            AttributeField.builder()
                     .name("reply")
                     .validTypes(List.of(AttributeTypeEnum.STRING))
                     .isRequired(true)
@@ -56,6 +61,12 @@ public class ActionChecker extends AbstractKeywordChecker {
                 ErrorUtils.declareSyntaxError(SyntaxErrorEnum.ATTRIBUTE_NOT_FOUND, child.getToken().getLine(), "action 类型的变量中不含有属性 " + attributeName);
             }
             switch (attributeName) {
+                case "default" -> {
+                    appear.add("default");
+                    if (!AttributeUtils.isBoolean(child)) {
+                        ErrorUtils.declareSyntaxError(SyntaxErrorEnum.ATTRIBUTE_TYPE_ERROR, child.getToken().getLine(), "action 类型的变量中属性 default 的类型不正确, 应为 boolean");
+                    }
+                }
                 case "reply" -> {
                     appear.add("reply");
                     if (!AttributeUtils.isString(child)) {

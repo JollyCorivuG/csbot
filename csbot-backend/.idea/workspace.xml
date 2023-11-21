@@ -5,17 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/ScriptInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/ScriptInterpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/environment/VariableTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/environment/VariableTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/CsBotActuator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/CsBotActuator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/VariableClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/VariableClassifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/strategy/maker/ActionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/strategy/maker/ActionMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ScriptParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ScriptParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/strategy/checker/ActionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/strategy/checker/ActionChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/script.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/WebSocketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/impl/WebSocketServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/AbstractMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/AbstractMsgHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/TextMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/TextMsgHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/msg/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/msg/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/msg/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/pinia/modules/msg/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/utils/websocket/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/utils/websocket/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/user-list/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/user-list/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/user-list/single-user/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/user-list/single-user/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +271,12 @@
       <workItem from="1700185157785" duration="16902000" />
       <workItem from="1700271546964" duration="4340000" />
       <workItem from="1700306182249" duration="4248000" />
-      <workItem from="1700360938799" duration="620000" />
+      <workItem from="1700360938799" duration="4631000" />
+      <workItem from="1700403490705" duration="535000" />
+      <workItem from="1700443583456" duration="1499000" />
+      <workItem from="1700459145022" duration="1860000" />
+      <workItem from="1700462447753" duration="341000" />
+      <workItem from="1700531986116" duration="859000" />
     </task>
     <servers />
   </component>

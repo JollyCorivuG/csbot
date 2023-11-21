@@ -1,6 +1,7 @@
 package com.jhc.csbot.script_interpreter.core.interpreter.environment;
 
 import com.jhc.csbot.script_interpreter.common.domain.model.variable.AbstractVariable;
+import com.jhc.csbot.script_interpreter.common.domain.model.variable.common.Action;
 import com.jhc.csbot.script_interpreter.common.domain.model.variable.common.Intent;
 import com.jhc.csbot.script_interpreter.common.domain.model.variable.common.Status;
 
@@ -18,6 +19,7 @@ public class VariableTable {
     public static Map<String, AbstractVariable> variableMap = new HashMap<>();
     public static List<Intent> intents = new ArrayList<>();
     public static Status initStatus;
+    public static Action defaultAction;
 
     public static AbstractVariable getByName(String name) {
         if (variableMap.get(name) == null) {

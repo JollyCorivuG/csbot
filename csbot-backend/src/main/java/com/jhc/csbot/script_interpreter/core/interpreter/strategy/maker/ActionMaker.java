@@ -26,9 +26,13 @@ public class ActionMaker extends AbstractVariableMaker {
     @Override
     public void make(SyntaxTreeNode node) {
         String variableName = node.getToken().getValue();
+        Boolean isDefault = null;
         String reply = null;
         Status afterStatus = null;
         for (SyntaxTreeNode child : node.getChildren().values()) {
+            if (child.getToken().getValue().equals("default")) {
+               isDefault = Boolean.parseBoolean(child.getChildren().values().iterator().next().getToken().getValue());
+            }
             if (child.getToken().getValue().equals("reply")) {
                 reply = child.getChildren().values().iterator().next().getToken().getValue();
             }
@@ -42,6 +46,7 @@ public class ActionMaker extends AbstractVariableMaker {
         }
         Action v = new Action();
         v.setName(variableName);
+        v.setIsDefault(isDefault);
         v.setReply(reply);
         v.setAfterStatus(afterStatus);
         VariableTable.variableMap.put(variableName, v);

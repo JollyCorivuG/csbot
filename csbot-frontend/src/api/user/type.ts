@@ -48,5 +48,9 @@ export interface GetMeResponse extends CommonResponse {
     data: UserInfo
 }
 
+// 获取在线用户列表返回响应
+export interface GetOnlineUserListResponse extends CommonResponse {
+    data: UserInfo[]
+}
 
 

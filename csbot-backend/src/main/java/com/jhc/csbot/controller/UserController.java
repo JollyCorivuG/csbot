@@ -10,6 +10,7 @@ import com.jhc.csbot.model.vo.auth.AuthInfo;
 import com.jhc.csbot.model.vo.user.CaptchaImgInfo;
 import com.jhc.csbot.model.vo.user.UserInfo;
 import com.jhc.csbot.service.IUserService;
+import com.jhc.csbot.service.IWebSocketService;
 import com.jhc.csbot.utils.RedisUtils;
 import com.jhc.csbot.utils.RequestHolder;
 import io.swagger.v3.oas.annotations.Operation;
@@ -22,6 +23,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.nio.file.Files;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -41,6 +43,9 @@ public class UserController {
 
     @Resource
     private IUserService userService;
+
+    @Resource
+    private IWebSocketService webSocketService;
 
     @GetMapping("/public/captcha")
     @Operation(summary = "得到验证码")
@@ -82,5 +87,16 @@ public class UserController {
     public BasicResponse<UserInfo> getMe() {
         Long userId = RequestHolder.get().getUid();
         return BasicResponse.success(userService.getUserInfoById(userId));
+    }
+
+    @GetMapping("/online")
+    @Operation(summary = "获取当前在线用户")
+    public BasicResponse<List<UserInfo>> getOnlineUsers() {
+        Long userId = RequestHolder.get().getUid();
+        return BasicResponse.success(
+                webSocketService.getOnlineUser().stream()
+                        .filter(uid -> !uid.equals(userId))
+                        .map(userService::getUserInfoById).toList()
+        );
     }
 }

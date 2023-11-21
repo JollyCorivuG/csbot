@@ -1,7 +1,7 @@
 <template>
     <div class="user_list">
         <div class="header">
-            咨询人数：1
+            咨询人数：{{userList.length}}
         </div>
         <div class="content">
             <a-list :bordered="false" :split="false" scrollbar :max-height="maxHeight">
@@ -16,18 +16,25 @@
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
 import SingleUser from "@/views/index/components/chat-box/user-list/single-user/index.vue";
-import {UserInfo} from "@/api/user/type.ts";
+import {GetOnlineUserListResponse, UserInfo} from "@/api/user/type.ts";
 import useUserStore from "@/pinia/modules/user";
+import {reqOnlineUserList} from "@/api/user";
+import {Message} from "@arco-design/web-vue";
 
 // 用户列表
 const userList = ref<UserInfo[]>([])
 const userStore = useUserStore()
 // 列表的最大高度
 const maxHeight = ref<number>(0)
-onMounted(() => {
+onMounted(async () => {
     const content = document.querySelector('.content')
     maxHeight.value = content?.clientHeight as number
     userList.value.push(userStore.userInfo)
+    const resp: GetOnlineUserListResponse = await reqOnlineUserList()
+    if (resp.statusCode != 0) {
+        Message.error(resp.statusMsg)
+    }
+    userList.value = userList.value.concat(resp.data)
 })
 </script>
 

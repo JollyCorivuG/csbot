@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="latest_message">
-                        Bot: hello
+                        {{msgStore.msgList[msgStore.msgList.length - 1]?.body.content}}
                     </div>
                 </div>
             </div>
@@ -105,20 +105,20 @@ watch(() => msgStore.scrollerFlag, async (newVal, oldVal) => {
             height: 60px;
             background-color: #323644;
             padding: 12px 10px;
-            img {
-                width: 38px;
-                height: 38px;
-            }
             cursor: pointer;
             border-radius: 8px;
             display: flex;
             align-items: center;
+            img {
+                width: 38px;
+                height: 38px;
+            }
             .item_info {
                 display: flex;
                 flex-direction: column;
                 margin-left: 10px;
                 justify-content: space-evenly;
-                width: 100%;
+                width: calc(100% - 48px);
                 .name {
                     color: white;
                     font-size: 15px;
@@ -140,6 +140,10 @@ watch(() => msgStore.scrollerFlag, async (newVal, oldVal) => {
                     color: rgba(255, 255, 255, 0.6);
                     font-size: 12px;
                     margin-top: 5px;
+                    white-space: nowrap; /* 禁止换行 */
+                    overflow-x: hidden; /* 超出部分隐藏 */
+                    overflow-y: hidden;
+                    text-overflow: ellipsis; /* 使用省略号表示被截断的文本 */
                 }
             }
         }

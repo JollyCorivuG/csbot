@@ -20,7 +20,9 @@
 </template>
 
 <script setup lang="ts">
+import useUserStore from "@/pinia/modules/user";
 
+const userStore = useUserStore()
 // 接收父亲组件传递的数据['friend'], 类型是UserInfo
 import {PropType} from "vue";
 import {UserInfo} from "@/api/user/type.ts";

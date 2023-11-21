@@ -30,12 +30,44 @@ intent 查头像 {
     exec_action: 执行查头像;
 }
 
+intent 初始状态 {
+    include: ["初始", "初始状态"];
+    priority: 2;
+    exec_action: 回到初始状态;
+}
+
+intent 再见 {
+    include: ["再见", "拜拜"];
+    priority: 3;
+    exec_action: 退出;
+}
+
+action 默认 {
+    default: true;
+    reply: "抱歉，我不太明白您的意思, 请换个说法试试";
+    after_status: 常规;
+}
+
+action 回到初始状态 {
+    default: false;
+    reply: "已回到初始状态";
+    after_status: 欢迎;
+}
+
+action 退出 {
+    default: false;
+    reply: "再见！";
+    after_status: 欢迎;
+}
+
 action 执行问候 {
+    default: false;
     reply: "你好！很高兴为您服务";
     after_status: 常规;
 }
 
 action 执行查头像 {
+    default: false;
     reply: "您的头像地址是：${头像地址}";
     after_status: 常规;
 }

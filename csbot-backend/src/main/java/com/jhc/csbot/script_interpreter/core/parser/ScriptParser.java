@@ -33,7 +33,7 @@ public class ScriptParser {
     public void init() {
         // 1.根据 token 流构建语法树
         this.syntaxTree = SyntaxTreeBuilder.exec(tokenStream);
-        log.info("语法树构建完成");
+        this.syntaxTree.showTotalInfo();
 
         // 2.对语法树进行语法检查
         SyntaxChecker.exec(this.syntaxTree);

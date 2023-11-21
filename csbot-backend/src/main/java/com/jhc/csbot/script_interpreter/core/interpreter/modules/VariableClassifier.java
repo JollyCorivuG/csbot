@@ -1,6 +1,7 @@
 package com.jhc.csbot.script_interpreter.core.interpreter.modules;
 
 import com.jhc.csbot.script_interpreter.common.domain.enums.lexical.KeywordEnum;
+import com.jhc.csbot.script_interpreter.common.domain.model.variable.common.Action;
 import com.jhc.csbot.script_interpreter.common.domain.model.variable.common.Status;
 import com.jhc.csbot.script_interpreter.core.interpreter.environment.VariableTable;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +16,9 @@ import java.util.List;
  */
 @Slf4j
 public class VariableClassifier {
+    /**
+     * 将所有 status 类型的变量筛选出来, 并找出初始状态
+     */
     private static void filterStatusVariable() {
         // 遍历变量表, 将所有 status 类型的变量筛选出来
         List<Status> statusList = new ArrayList<>();
@@ -41,6 +45,9 @@ public class VariableClassifier {
         }
     }
 
+    /**
+     * 将所有意图变量筛选出来, 并按照优先级排序, 高优先级的意图在前
+      */
     private static void filterIntentVariable() {
         // 将所有意图变量筛选出来, 加入 VariableTable.intents
         VariableTable.variableMap.forEach((k, v) -> {
@@ -52,11 +59,34 @@ public class VariableClassifier {
         VariableTable.intents.sort((o1, o2) -> o2.getPriority() - o1.getPriority());
     }
 
+    /**
+     * 将所有 action 类型的变量筛选出来, 并找出默认 action
+     */
+    private static void filterActionVariable() {
+        List<Action> defaultActions = new ArrayList<>();
+        VariableTable.variableMap.forEach((k, v) -> {
+            if (v.getType() == KeywordEnum.ACTION) {
+                Action action = (Action) v;
+                if (action.getIsDefault()) {
+                    VariableTable.defaultAction = action;
+                    defaultActions.add(action);
+                }
+            }
+        });
+        if (defaultActions.size() > 1) {
+            log.error("只能存在一个默认 action");
+            throw new RuntimeException("只能存在一个默认 action");
+        }
+    }
+
     public static void exec() {
         // 1.将所有 status 类型的变量筛选出来
         filterStatusVariable();
 
         // 2.将所有意图变量筛选出来
         filterIntentVariable();
+
+        // 3.将所有 action 类型的变量筛选出来
+        filterActionVariable();
     }
 }

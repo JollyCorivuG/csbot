@@ -1,5 +1,11 @@
 import request from "@/utils/request.ts";
-import {CaptchaResponse, GetMeResponse, LoginParams, LoginResponse} from "@/api/user/type.ts";
+import {
+    CaptchaResponse,
+    GetMeResponse,
+    GetOnlineUserListResponse,
+    LoginParams,
+    LoginResponse
+} from "@/api/user/type.ts";
 
 
 enum UserAPI {
@@ -9,6 +15,8 @@ enum UserAPI {
     loginUrl = '/users/public/login',
     // 获取当前登录用户信息
     getMeUrl = '/users/me',
+    // 获取在线用户列表
+    getOnlineUserList = 'users/online'
 }
 
 // 获取验证码
@@ -19,4 +27,7 @@ export const reqLogin = (loginParams: LoginParams) => request.post<any, LoginRes
 
 // 获取当前登录用户信息
 export const reqGetMe = () => request.get<any, GetMeResponse>(UserAPI.getMeUrl)
+
+// 获取在线用户列表
+export const reqOnlineUserList = () => request.get<any, GetOnlineUserListResponse>(UserAPI.getOnlineUserList)
 

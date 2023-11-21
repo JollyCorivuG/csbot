@@ -27,7 +27,6 @@ public class CsBotActuator {
     private static final IWebSocketService webSocketService = SpringUtil.getBean(IWebSocketService.class); // ws 服务, 用于主动推送消息
     private static final IMsgService msgService = SpringUtil.getBean(IMsgService.class); // 消息服务, 用于发送消息
 
-    private static final String DEFAULT_REPLY = "抱歉, 我不太明白您的意思, 请您换个说法吧!";
 
     /**
      * 执行消息发送
@@ -93,6 +92,12 @@ public class CsBotActuator {
     }
 
 
+    /**
+     * 匹配用户输入的消息, 返回匹配到的意图
+     * @param userId
+     * @param msg
+     * @return
+     */
     public static Intent matchIntent(Long userId, String msg) {
         // 遍历变量表中的意图 (已按照优先级排序)
         for (Intent intent : VariableTable.intents) {
@@ -138,7 +143,9 @@ public class CsBotActuator {
         Intent intent = matchIntent(userId, msg);
         if (intent == null) {
             // 如果没有匹配上, 则执行一条默认的 reply
-            execMsgSend(DEFAULT_REPLY, userId);
+            if (VariableTable.defaultAction != null) {
+                execAction(userId, VariableTable.defaultAction);
+            }
             return;
         }
         // 如果匹配上了, 就执行意图的动作

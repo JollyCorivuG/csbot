@@ -25,4 +25,10 @@ public class SyntaxTreeNode {
      * 额外的信息
      */
     private Boolean leftPartOfOperator; // 是否为运算符的左部
+
+    @Override
+    public String toString() {
+        // 只需要打印 token 的值, 包括词汇和属性
+        return token.toString();
+    }
 }

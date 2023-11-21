@@ -20,6 +20,7 @@ public class Action extends AbstractVariable {
         return KeywordEnum.ACTION;
     }
 
+    private Boolean isDefault;
     private String reply;
     private Status afterStatus;
 }
