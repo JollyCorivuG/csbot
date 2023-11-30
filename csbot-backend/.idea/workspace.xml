@@ -5,23 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa40c76-1bed-4fcb-b6d9-f3fae65cba72" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/SyntaxTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/config/InterceptorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/MsgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/controller/MsgController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/event/listener/MsgSendListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/AttributeField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/syntax/AttributeField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/ScriptInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/ScriptInterpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Intent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Intent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/common/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/exclusive/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/common/domain/model/variable/exclusive/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/environment/UsersState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/environment/UsersState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/environment/VariableTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/environment/VariableTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/CsBotActuator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/CsBotActuator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/VariableClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/VariableClassifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/strategy/maker/ActionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/strategy/maker/ActionMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ScriptParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/ScriptParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/strategy/checker/ActionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/strategy/checker/ActionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/VariableResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/interpreter/modules/VariableResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/lexer/modules/TokenAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/lexer/modules/TokenAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/modules/SyntaxChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/core/parser/modules/SyntaxChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/script.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/api/user/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/user-list/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/user-list/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/user-list/single-user/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/user-list/single-user/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/AttributeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/AttributeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/ErrorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/ErrorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/LexicalUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/script_interpreter/utils/LexicalUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/TextMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jhc/csbot/service/strategy/msg/TextMsgHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/syntax_tree_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/syntax_tree_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jhc/csbot/interpreter/InterpreterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jhc/csbot/interpreter/ReplyConvertTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../csbot-frontend/src/views/index/components/chat-box/chat-message/msg-input/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +84,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Downloads/Material_Theme_UI-8.12.6.zip&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/full_stack_project/csbot/csbot-backend/src/main/java/com/jhc/csbot/script_interpreter/test/resources/cases/normal/t2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -104,86 +114,46 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal\t2" />
+      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\rsl\normal" />
+      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\rsl\abnormal" />
+      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\rsl\abnormal\t2" />
       <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\service\strategy\msg" />
-      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot" />
-      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\common\domain\vo" />
-      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\common\domain" />
-      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal\t5" />
+      <recent name="E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\simpulated" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.jhc.csbot.script_interpreter" />
+      <recent name="com.jhc.csbot.script_interpreter.test.stub" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jhc.csbot.script_interpreter.test.stub" />
       <recent name="com.jhc.csbot.script_interpreter.core.interpreter.strategy.maker" />
       <recent name="com.jhc.csbot.script_interpreter.core.parser.strategy.checker" />
       <recent name="com.jhc.csbot.script_interpreter.core.parser.handler.identifier" />
       <recent name="com.jhc.csbot.script_interpreter.core.parser.strategy.label" />
-      <recent name="com.jhc.csbot.model.vo.auth" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CsBotApplication">
+  <component name="RunManager" selected="JUnit.TestAutomation.exec (1)">
     <configuration name="csbot.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/sql/csbot.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="5af18d64-7e8c-4574-9e54-304f6999ba53" namespace="schema/&quot;csbot&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="InterpreterTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAutomation.exec (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="csbot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jhc.csbot.interpreter.*" />
+          <option name="PATTERN" value="com.jhc.csbot.script_interpreter.test.auto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jhc.csbot.interpreter" />
-      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.interpreter.InterpreterTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JwtUtilsTest.testGenerate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="csbot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jhc.csbot.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jhc.csbot.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.utils.JwtUtilsTest" />
-      <option name="METHOD_NAME" value="testGenerate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MsgServiceTest.testInsertMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="csbot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jhc.csbot.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jhc.csbot.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.service.MsgServiceTest" />
-      <option name="METHOD_NAME" value="testInsertMsg" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReplyConvertTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="csbot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jhc.csbot.interpreter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jhc.csbot.interpreter" />
-      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.interpreter.ReplyConvertTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="PACKAGE_NAME" value="com.jhc.csbot.script_interpreter.test.auto" />
+      <option name="MAIN_CLASS_NAME" value="com.jhc.csbot.script_interpreter.test.auto.TestAutomation" />
+      <option name="METHOD_NAME" value="exec" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,11 +174,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAutomation.exec (1)" />
         <item itemvalue="Spring Boot.CsBotApplication" />
-        <item itemvalue="JUnit.ReplyConvertTest.test" />
-        <item itemvalue="JUnit.InterpreterTest.test" />
-        <item itemvalue="JUnit.JwtUtilsTest.testGenerate" />
-        <item itemvalue="JUnit.MsgServiceTest.testInsertMsg" />
       </list>
     </recent_temporary>
   </component>
@@ -276,12 +243,27 @@
       <workItem from="1700443583456" duration="1499000" />
       <workItem from="1700459145022" duration="1860000" />
       <workItem from="1700462447753" duration="341000" />
-      <workItem from="1700531986116" duration="859000" />
+      <workItem from="1700531986116" duration="2618000" />
+      <workItem from="1700621601626" duration="49000" />
+      <workItem from="1700621665700" duration="1364000" />
+      <workItem from="1700625328046" duration="936000" />
+      <workItem from="1700795654713" duration="255000" />
+      <workItem from="1700823110025" duration="8482000" />
+      <workItem from="1700879055031" duration="5152000" />
+      <workItem from="1700889004158" duration="17621000" />
+      <workItem from="1700962214230" duration="9079000" />
+      <workItem from="1700983351673" duration="16551000" />
+      <workItem from="1701054225688" duration="1808000" />
+      <workItem from="1701069842279" duration="146000" />
+      <workItem from="1701230645164" duration="144000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.result" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

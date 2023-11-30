@@ -1,0 +1,97 @@
+global 北京温度 {
+    type: "int";
+    value: 27;
+}
+global 北京天气状况 {
+    type: "string";
+    value: "晴";
+}
+global 天津温度 {
+    type: "int";
+    value: 14;
+}
+global 天津天气状况 {
+    type: "string";
+    value: "多云";
+}
+
+global 上海温度 {
+    type: "int";
+    value: 6;
+}
+global 上海天气状况 {
+    type: "string";
+    value: "小雨";
+}
+
+/*
+    北京
+*/
+intent 查询北京天气 {
+    include: ["北京"];
+    priority: 1;
+    exec_action: 执行查询北京天气;
+}
+action 执行查询北京天气 {
+    default: false;
+    reply: "北京天气为：${北京温度} 摄氏度, ${北京天气状况}";
+    after_status: 天气欢迎;
+}
+
+/*
+    天津
+*/
+intent 查询天津天气 {
+    include: ["天津"];
+    priority: 1;
+    exec_action: 执行查询天津天气;
+}
+action 执行查询天津天气 {
+    default: false;
+    reply: "天津天气为：${天津温度} 摄氏度, ${天津天气状况}";
+    after_status: 天气欢迎;
+}
+
+/*
+    上海
+*/
+intent 查询上海天气 {
+    include: ["上海"];
+    priority: 1;
+    exec_action: 执行查询上海天气;
+}
+action 执行查询上海天气 {
+    default: false;
+    reply: "上海天气为：${上海温度} 摄氏度, ${上海天气状况}";
+    after_status: 天气欢迎;
+}
+
+// 默认
+action 默认 {
+    default: true;
+    reply: "抱歉, 没有找到相关地区的天气信息";
+    after_status: 天气欢迎;
+}
+
+
+status 天气欢迎 {
+    init: true;
+    speak: "您好！请问您需要查询当前的天气情况吗?";
+    option: [
+        {
+            input: "1";
+            text: "查询北京天气";
+            purpose: 查询北京天气;
+        },
+        {
+            input: "2";
+            text: "查询天津天气";
+            purpose: 查询天津天气;
+        },
+        {
+            input: "3";
+            text: "查询上海天气";
+            purpose: 查询上海天气;
+        }
+    ];
+}

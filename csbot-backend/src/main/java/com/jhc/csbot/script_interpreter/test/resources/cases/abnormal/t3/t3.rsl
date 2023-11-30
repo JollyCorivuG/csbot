@@ -1,0 +1,4 @@
+env global {
+    package_name: "com.jhc.csbot.model.entity";
+    class_name: "User";
+}

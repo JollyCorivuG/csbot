@@ -20,6 +20,9 @@ public class AttributeUtils {
      * @return
      */
     public static boolean isString(SyntaxTreeNode node) {
+        if (node == null) {
+            return false;
+        }
         if (node.getChildren().size() != 1) {
             return false;
         }
@@ -32,6 +35,9 @@ public class AttributeUtils {
      * @return
      */
     public static boolean isBoolean(SyntaxTreeNode child) {
+        if (child == null) {
+            return false;
+        }
         if (child.getChildren().size() != 1) {
             return false;
         }
@@ -44,6 +50,9 @@ public class AttributeUtils {
      * @return
      */
     public static boolean isNumber(SyntaxTreeNode node) {
+        if (node == null) {
+            return false;
+        }
         if (node.getChildren().size() != 1) {
             return false;
         }
@@ -56,6 +65,9 @@ public class AttributeUtils {
      * @return
      */
     public static boolean isObject(SyntaxTreeNode child) {
+        if (child == null) {
+            return false;
+        }
         if (child.getChildren().isEmpty()) {
             return false;
         }
@@ -73,6 +85,9 @@ public class AttributeUtils {
      * @return
      */
     public static boolean isStringArray(SyntaxTreeNode child) {
+        if (child == null) {
+            return false;
+        }
         // 子节点中包含 [, ] 以及若干个字符串
         if (child.getChildren().size() < 3) {
             return false;
@@ -97,6 +112,9 @@ public class AttributeUtils {
      * @return
      */
     public static boolean isObjectArray(SyntaxTreeNode child) {
+        if (child == null) {
+            return false;
+        }
         // 子节点中包含 [, ] 以及若干个对象
         if (child.getChildren().size() < 3) {
             return false;
@@ -124,6 +142,9 @@ public class AttributeUtils {
      * @return
      */
     public static boolean isVariable(SyntaxTreeNode child, Set<String> variables) {
+        if (child == null) {
+            return false;
+        }
         // 第一种情况是有一个子节点, 且是变量
         if (child.getChildren().size() == 1) {
             SyntaxTreeNode node = child.getChildren().values().iterator().next();
@@ -155,6 +176,4 @@ public class AttributeUtils {
         }
         return false;
     }
-
-
 }

@@ -1,0 +1,4 @@
+global i {
+    type: "int";
+    value: "1";
+}

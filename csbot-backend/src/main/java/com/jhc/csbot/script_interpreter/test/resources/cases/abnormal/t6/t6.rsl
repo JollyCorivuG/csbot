@@ -1,0 +1,9 @@
+global i {
+    type: "int";
+    value: 1;
+}
+
+global i {
+    type: "int";
+    value: 2;
+}

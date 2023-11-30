@@ -1,0 +1,683 @@
+2023-11-27 11:05:23.638 [main] INFO  com.jhc.csbot.CsBotApplication - Starting CsBotApplication using Java 17.0.6 with PID 7428 (E:\full_stack_project\csbot\csbot-backend\target\classes started by dell in E:\full_stack_project\csbot\csbot-backend)
+2023-11-27 11:05:23.645 [main] INFO  com.jhc.csbot.CsBotApplication - The following 1 profile is active: "dev"
+2023-11-27 11:05:24.805 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-27 11:05:24.805 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-27 11:05:24.837 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-11-27 11:05:25.549 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-11-27 11:05:25.565 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8081"]
+2023-11-27 11:05:25.565 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-27 11:05:25.565 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-11-27 11:05:25.659 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-27 11:05:25.659 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1971 ms
+2023-11-27 11:05:26.563 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb] REGISTERED
+2023-11-27 11:05:26.563 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb] BIND: 0.0.0.0/0.0.0.0:8090
+2023-11-27 11:05:26.563 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] ACTIVE
+2023-11-27 11:05:26.594 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 11:05:27.659 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-27 11:05:27.708 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8081"]
+2023-11-27 11:05:27.726 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-27 11:05:27.731 [main] INFO  com.jhc.csbot.CsBotApplication - Started CsBotApplication in 4.448 seconds (process running for 10.069)
+2023-11-27 11:06:00.988 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] READ: [id: 0x72fda80c, L:/[0:0:0:0:0:0:0:1]:8090 - R:/[0:0:0:0:0:0:0:1]:62565]
+2023-11-27 11:06:00.989 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] READ COMPLETE
+2023-11-27 11:06:01.048 [nioEventLoopGroup-5-1] INFO  c.jhc.csbot.websocket.NettyWebSocketServerHandler - 客户端尝试连接
+2023-11-27 11:06:01.067 [http-nio-0.0.0.0-8081-exec-6] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-27 11:06:01.067 [http-nio-0.0.0.0-8081-exec-6] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-27 11:06:01.069 [http-nio-0.0.0.0-8081-exec-6] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-27 11:06:01.190 [http-nio-0.0.0.0-8081-exec-3] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: 9110abfd99e34dda9f80c3dbcaa9ed7c, path: /capi/auth/public/refresh/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cCI6MTcwMTYxMTIzMSwiaWF0IjoxNzAxMDA2NDMxfQ.yuqx_MrBkJ53uSAcYoB9aITslM9jkXZ9OAp4--2VsFI, ip: 0:0:0:0:0:0:0:1, params: [eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cCI6MTcwMTYxMTIzMSwiaWF0IjoxNzAxMDA2NDMxfQ.yuqx_MrBkJ53uSAcYoB9aITslM9jkXZ9OAp4--2VsFI]
+2023-11-27 11:06:01.207 [http-nio-0.0.0.0-8081-exec-3] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: 9110abfd99e34dda9f80c3dbcaa9ed7c, cost: 25 ms
+2023-11-27 11:06:01.228 [nioEventLoopGroup-5-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-27 11:06:01.257 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: 30dba914e3094bb98c7ff9369c60842e, path: /capi/users/online, ip: 0:0:0:0:0:0:0:1, params: []
+2023-11-27 11:06:01.257 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 1
+2023-11-27 11:06:01.257 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 1
+2023-11-27 11:06:01.257 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: 30dba914e3094bb98c7ff9369c60842e, cost: 0 ms
+2023-11-27 11:06:01.367 [nioEventLoopGroup-5-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59e1cfb4
+2023-11-27 11:06:01.370 [nioEventLoopGroup-5-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-27 11:06:01.450 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 1
+2023-11-27 11:06:01.450 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 1
+2023-11-27 11:06:04.543 [http-nio-0.0.0.0-8081-exec-7] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: cf2310bb374c4e7f87e8184ec618557b, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=1})]
+2023-11-27 11:06:04.554 [http-nio-0.0.0.0-8081-exec-7] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: cf2310bb374c4e7f87e8184ec618557b, cost: 11 ms
+2023-11-27 11:06:05.551 [http-nio-0.0.0.0-8081-exec-8] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: ab7f3dbaa20d4449a5ab5b2e1ad91a27, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=2})]
+2023-11-27 11:06:05.556 [http-nio-0.0.0.0-8081-exec-8] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: ab7f3dbaa20d4449a5ab5b2e1ad91a27, cost: 5 ms
+2023-11-27 11:06:08.920 [http-nio-0.0.0.0-8081-exec-9] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: 40e4d6bd1e174504a59337b907647188, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=你好})]
+2023-11-27 11:06:08.925 [http-nio-0.0.0.0-8081-exec-9] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: 40e4d6bd1e174504a59337b907647188, cost: 4 ms
+2023-11-27 11:06:15.649 [http-nio-0.0.0.0-8081-exec-6] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: cae349e8c1024e9ab837299beaba7340, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=您好})]
+2023-11-27 11:06:15.654 [http-nio-0.0.0.0-8081-exec-6] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: cae349e8c1024e9ab837299beaba7340, cost: 5 ms
+2023-11-27 11:06:22.272 [http-nio-0.0.0.0-8081-exec-4] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: f726573e41a74da384f8f196039f8b7b, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=我的头像是啥})]
+2023-11-27 11:06:22.278 [http-nio-0.0.0.0-8081-exec-4] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: f726573e41a74da384f8f196039f8b7b, cost: 5 ms
+2023-11-27 11:06:26.707 [nioEventLoopGroup-5-1] WARN  c.jhc.csbot.websocket.NettyWebSocketServerHandler - 触发 channelInactive 掉线![72fda80c]
+2023-11-27 11:06:26.708 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 0
+2023-11-27 11:06:26.708 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 0
+2023-11-27 11:06:26.960 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] READ: [id: 0x80ebdf80, L:/[0:0:0:0:0:0:0:1]:8090 - R:/[0:0:0:0:0:0:0:1]:62588]
+2023-11-27 11:06:26.960 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] READ COMPLETE
+2023-11-27 11:06:26.961 [nioEventLoopGroup-5-2] INFO  c.jhc.csbot.websocket.NettyWebSocketServerHandler - 客户端尝试连接
+2023-11-27 11:06:26.975 [nioEventLoopGroup-5-2] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 1
+2023-11-27 11:06:26.976 [nioEventLoopGroup-5-2] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 1
+2023-11-27 11:06:26.993 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: 3dbac76c299443468bb4e4e991729dd0, path: /capi/users/online, ip: 0:0:0:0:0:0:0:1, params: []
+2023-11-27 11:06:26.994 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 1
+2023-11-27 11:06:26.994 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 1
+2023-11-27 11:06:26.994 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: 3dbac76c299443468bb4e4e991729dd0, cost: 0 ms
+2023-11-27 11:07:57.347 [nioEventLoopGroup-5-2] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 0
+2023-11-27 11:07:57.347 [nioEventLoopGroup-5-2] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 0
+2023-11-27 11:07:57.347 [nioEventLoopGroup-5-2] WARN  c.jhc.csbot.websocket.NettyWebSocketServerHandler - 触发 channelInactive 掉线![80ebdf80]
+2023-11-27 11:07:57.347 [nioEventLoopGroup-5-2] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 0
+2023-11-27 11:07:57.347 [nioEventLoopGroup-5-2] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 0
+2023-11-27 11:28:13.679 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] READ: [id: 0x7bc62a60, L:/[0:0:0:0:0:0:0:1]:8090 - R:/[0:0:0:0:0:0:0:1]:62872]
+2023-11-27 11:28:13.680 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] READ COMPLETE
+2023-11-27 11:28:13.682 [nioEventLoopGroup-5-3] INFO  c.jhc.csbot.websocket.NettyWebSocketServerHandler - 客户端尝试连接
+2023-11-27 11:28:13.702 [nioEventLoopGroup-5-3] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 1
+2023-11-27 11:28:13.702 [nioEventLoopGroup-5-3] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 1
+2023-11-27 11:28:13.712 [http-nio-0.0.0.0-8081-exec-8] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: 2adbcb666b5e4646b702f3391779f2a2, path: /capi/users/online, ip: 0:0:0:0:0:0:0:1, params: []
+2023-11-27 11:28:13.713 [http-nio-0.0.0.0-8081-exec-8] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 1
+2023-11-27 11:28:13.713 [http-nio-0.0.0.0-8081-exec-8] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 1
+2023-11-27 11:28:13.713 [http-nio-0.0.0.0-8081-exec-8] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: 2adbcb666b5e4646b702f3391779f2a2, cost: 0 ms
+2023-11-27 11:28:30.127 [http-nio-0.0.0.0-8081-exec-10] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: cffa24ac8eb640428f86eeea7cb06467, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=1})]
+2023-11-27 11:28:30.132 [http-nio-0.0.0.0-8081-exec-10] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: cffa24ac8eb640428f86eeea7cb06467, cost: 5 ms
+2023-11-27 11:29:54.345 [nioEventLoopGroup-5-3] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 0
+2023-11-27 11:29:54.345 [nioEventLoopGroup-5-3] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 0
+2023-11-27 11:29:54.345 [nioEventLoopGroup-5-3] WARN  c.jhc.csbot.websocket.NettyWebSocketServerHandler - 触发 channelInactive 掉线![7bc62a60]
+2023-11-27 11:29:54.346 [nioEventLoopGroup-5-3] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 0
+2023-11-27 11:29:54.346 [nioEventLoopGroup-5-3] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 0
+2023-11-27 11:34:46.210 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.jhc.csbot.script_interpreter.test.auto.TestAutomation]: TestAutomation does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-11-27 11:34:46.332 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.jhc.csbot.CsBotApplication for test class com.jhc.csbot.script_interpreter.test.auto.TestAutomation
+2023-11-27 11:34:46.832 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - Starting TestAutomation using Java 17.0.6 with PID 18952 (started by dell in E:\full_stack_project\csbot\csbot-backend)
+2023-11-27 11:34:46.833 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - The following 1 profile is active: "dev"
+2023-11-27 11:34:47.994 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-27 11:34:47.997 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-27 11:34:48.038 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-11-27 11:34:49.786 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7595d834] REGISTERED
+2023-11-27 11:34:49.787 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7595d834] BIND: 0.0.0.0/0.0.0.0:8090
+2023-11-27 11:34:49.788 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7595d834] CLOSE
+2023-11-27 11:34:49.788 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'nettyWebSocketServer': Invocation of init method failed
+2023-11-27 11:34:49.789 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7595d834] UNREGISTERED
+2023-11-27 11:34:49.816 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-27 11:34:49.834 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'nettyWebSocketServer': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1406)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:187)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:119)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579)
+	at io.netty.handler.logging.LoggingHandler.bind(LoggingHandler.java:230)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:602)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-27 11:34:49.845 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.jhc.csbot.script_interpreter.test.auto.TestAutomation@113c4ad6]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@c7673ae testClass = com.jhc.csbot.script_interpreter.test.auto.TestAutomation, locations = [], classes = [com.jhc.csbot.CsBotApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4f0100a7, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1e097d59, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2c4d1ac, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@29526c05, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@55493582, org.springframework.boot.test.context.SpringBootTestAnnotation@bef2dd95], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'nettyWebSocketServer': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1406)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:187)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:119)
+	... 72 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579)
+	at io.netty.handler.logging.LoggingHandler.bind(LoggingHandler.java:230)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:602)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-27 11:34:51.255 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] INACTIVE
+2023-11-27 11:34:51.255 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x51b4b2fb, L:/[0:0:0:0:0:0:0:0]:8090] UNREGISTERED
+2023-11-27 11:34:53.315 [SpringApplicationShutdownHook] INFO  com.jhc.csbot.websocket.NettyWebSocketServer - 关闭 ws server 成功
+2023-11-27 11:34:53.323 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-27 11:34:53.326 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-27 11:34:54.453 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.jhc.csbot.script_interpreter.test.auto.TestAutomation]: TestAutomation does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-11-27 11:34:54.655 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.jhc.csbot.CsBotApplication for test class com.jhc.csbot.script_interpreter.test.auto.TestAutomation
+2023-11-27 11:34:55.176 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - Starting TestAutomation using Java 17.0.6 with PID 17972 (started by dell in E:\full_stack_project\csbot\csbot-backend)
+2023-11-27 11:34:55.178 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - The following 1 profile is active: "dev"
+2023-11-27 11:34:56.353 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-27 11:34:56.355 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-27 11:34:56.396 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-11-27 11:34:58.126 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xfdae8780] REGISTERED
+2023-11-27 11:34:58.128 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xfdae8780] BIND: 0.0.0.0/0.0.0.0:8090
+2023-11-27 11:34:58.129 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xfdae8780, L:/[0:0:0:0:0:0:0:0]:8090] ACTIVE
+2023-11-27 11:34:58.183 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 11:34:59.884 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-27 11:34:59.958 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - Started TestAutomation in 5.141 seconds (process running for 6.395)
+2023-11-27 11:35:00.817 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t1 ...
+2023-11-27 11:35:00.818 [main] INFO  c.j.c.s.test.auto.modules.FileComparator - 正在比较输出文件与预期文件 ...
+2023-11-27 11:35:00.821 [main] INFO  c.j.c.s.test.auto.modules.FileComparator - 比较输出文件与预期文件完成
+2023-11-27 11:35:00.844 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xfdae8780, L:/[0:0:0:0:0:0:0:0]:8090] INACTIVE
+2023-11-27 11:35:00.844 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xfdae8780, L:/[0:0:0:0:0:0:0:0]:8090] UNREGISTERED
+2023-11-27 11:35:02.911 [SpringApplicationShutdownHook] INFO  com.jhc.csbot.websocket.NettyWebSocketServer - 关闭 ws server 成功
+2023-11-27 11:35:38.008 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.jhc.csbot.script_interpreter.test.auto.TestAutomation]: TestAutomation does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-11-27 11:35:38.152 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.jhc.csbot.CsBotApplication for test class com.jhc.csbot.script_interpreter.test.auto.TestAutomation
+2023-11-27 11:35:38.549 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - Starting TestAutomation using Java 17.0.6 with PID 6216 (started by dell in E:\full_stack_project\csbot\csbot-backend)
+2023-11-27 11:35:38.549 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - The following 1 profile is active: "dev"
+2023-11-27 11:35:39.675 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-27 11:35:39.678 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-27 11:35:39.720 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2023-11-27 11:35:41.435 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xac82457e] REGISTERED
+2023-11-27 11:35:41.436 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xac82457e] BIND: 0.0.0.0/0.0.0.0:8090
+2023-11-27 11:35:41.437 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xac82457e, L:/[0:0:0:0:0:0:0:0]:8090] ACTIVE
+2023-11-27 11:35:41.480 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 11:35:43.149 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-27 11:35:43.218 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - Started TestAutomation in 4.908 seconds (process running for 6.081)
+2023-11-27 11:35:44.002 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t1 ...
+2023-11-27 11:35:44.008 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 11:35:44.033 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-27 11:35:44.189 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31773d5b
+2023-11-27 11:35:44.198 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-27 11:35:44.331 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:44.331 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:44.333 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2023-11-27 11:35:45.487 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:45.487 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:45.488 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:46.495 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:46.495 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:46.496 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:47.508 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:47.508 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:47.509 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:48.517 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:48.517 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:48.518 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:49.537 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:49.537 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:49.538 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:50.557 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:50.558 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:50.559 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:51.573 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:51.573 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:51.574 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:52.582 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:52.582 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:52.584 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2023-11-27 11:35:53.593 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:53.593 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:53.594 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:54.610 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:54.610 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:54.611 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:55.625 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:55.625 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:55.626 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:56.640 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:56.640 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:56.641 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:57.661 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:57.662 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:57.663 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:58.670 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t1 测试完成
+2023-11-27 11:35:58.670 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t2 ...
+2023-11-27 11:35:58.674 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 11:35:58.675 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:58.675 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:58.676 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:35:59.691 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:35:59.691 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:35:59.693 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:00.713 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:00.713 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:00.714 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:01.725 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:01.725 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:01.726 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:02.736 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:02.736 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:02.737 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:03.753 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:03.753 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:03.754 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:04.766 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:04.766 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:04.767 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:05.773 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t2 测试完成
+2023-11-27 11:36:05.773 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t3 ...
+2023-11-27 11:36:05.778 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 11:36:05.780 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:05.780 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:05.781 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:06.786 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:06.786 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:06.788 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2023-11-27 11:36:07.797 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:07.797 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:07.798 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:08.812 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:08.812 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:08.813 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:09.826 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:09.826 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:09.828 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2023-11-27 11:36:10.840 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:10.840 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:10.841 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:11.855 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t3 测试完成
+2023-11-27 11:36:11.855 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t4 ...
+2023-11-27 11:36:11.859 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 11:36:11.860 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:11.860 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:11.860 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2023-11-27 11:36:12.867 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:12.867 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:12.868 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:13.873 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:13.873 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:13.874 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:14.882 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:14.882 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:14.883 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:15.889 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:15.889 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:15.890 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:16.899 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:16.899 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:16.900 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:17.909 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t4 测试完成
+2023-11-27 11:36:17.909 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t5 ...
+2023-11-27 11:36:17.913 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 11:36:17.914 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:17.914 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:17.915 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:18.921 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:18.922 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:18.922 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2023-11-27 11:36:19.937 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:19.937 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:19.938 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:20.952 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:20.952 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:20.953 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:21.960 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:21.960 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:21.961 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2023-11-27 11:36:22.968 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:22.968 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:22.969 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:23.980 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 11:36:23.980 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 11:36:23.981 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 11:36:24.987 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t5 测试完成
+2023-11-27 11:36:24.987 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t6 ...
+2023-11-27 11:36:24.987 [main] INFO  c.j.c.s.test.auto.modules.FileComparator - 正在比较输出文件与预期文件 ...
+2023-11-27 11:36:24.996 [main] INFO  c.j.c.s.test.auto.modules.FileComparator - 比较输出文件与预期文件完成
+2023-11-27 11:36:25.017 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xac82457e, L:/[0:0:0:0:0:0:0:0]:8090] INACTIVE
+2023-11-27 11:36:25.017 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xac82457e, L:/[0:0:0:0:0:0:0:0]:8090] UNREGISTERED
+2023-11-27 11:36:27.080 [SpringApplicationShutdownHook] INFO  com.jhc.csbot.websocket.NettyWebSocketServer - 关闭 ws server 成功
+2023-11-27 11:36:27.091 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-27 11:36:27.097 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-27 15:25:32.064 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.jhc.csbot.script_interpreter.test.auto.TestAutomation]: TestAutomation does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-11-27 15:25:32.202 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.jhc.csbot.CsBotApplication for test class com.jhc.csbot.script_interpreter.test.auto.TestAutomation
+2023-11-27 15:25:32.643 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - Starting TestAutomation using Java 17.0.6 with PID 7768 (started by dell in E:\full_stack_project\csbot\csbot-backend)
+2023-11-27 15:25:32.644 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - The following 1 profile is active: "dev"
+2023-11-27 15:25:33.770 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-27 15:25:33.773 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-27 15:25:33.813 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-11-27 15:25:35.490 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd5eb1ba5] REGISTERED
+2023-11-27 15:25:35.492 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd5eb1ba5] BIND: 0.0.0.0/0.0.0.0:8090
+2023-11-27 15:25:35.493 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd5eb1ba5, L:/[0:0:0:0:0:0:0:0]:8090] ACTIVE
+2023-11-27 15:25:35.532 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 15:25:37.099 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-27 15:25:37.157 [main] INFO  c.j.c.script_interpreter.test.auto.TestAutomation - Started TestAutomation in 4.787 seconds (process running for 6.01)
+2023-11-27 15:25:38.077 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t1 ...
+2023-11-27 15:25:38.084 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 15:25:38.107 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-27 15:25:38.245 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68c05c5b
+2023-11-27 15:25:38.248 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-27 15:25:38.352 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:38.352 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:38.353 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:39.474 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:39.474 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:39.475 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:40.483 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:40.483 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:40.484 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:41.493 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:41.493 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:41.494 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:42.514 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:42.515 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:42.515 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2023-11-27 15:25:43.525 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:43.525 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:43.526 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:44.533 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:44.533 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:44.534 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:45.539 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:45.539 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:45.540 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:46.552 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:46.552 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:46.553 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:47.561 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:47.561 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:47.562 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:48.571 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:48.571 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:48.571 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2023-11-27 15:25:49.576 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:49.576 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:49.577 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:50.590 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:50.590 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:50.591 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:51.598 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:51.598 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:51.599 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:52.617 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t1 测试完成
+2023-11-27 15:25:52.617 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t2 ...
+2023-11-27 15:25:52.620 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 15:25:52.621 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:52.622 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:52.622 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2023-11-27 15:25:53.627 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:53.627 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:53.628 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:54.637 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:54.637 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:54.638 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:55.642 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:55.642 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:55.643 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:56.651 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:56.651 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:56.652 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:57.657 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:57.657 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:57.659 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2023-11-27 15:25:58.664 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:58.664 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:58.665 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:25:59.674 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t2 测试完成
+2023-11-27 15:25:59.674 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t3 ...
+2023-11-27 15:25:59.677 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 15:25:59.679 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:25:59.679 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:25:59.679 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2023-11-27 15:26:00.693 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:00.694 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:00.695 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:01.703 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:01.703 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:01.704 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:02.718 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:02.719 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:02.721 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 2 ms
+2023-11-27 15:26:03.726 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:03.726 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:03.727 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:04.737 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:04.737 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:04.738 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:05.751 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t3 测试完成
+2023-11-27 15:26:05.751 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t4 ...
+2023-11-27 15:26:05.755 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 15:26:05.755 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:05.755 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:05.756 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:06.763 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:06.763 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:06.764 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:07.778 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:07.778 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:07.779 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:08.786 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:08.786 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:08.787 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:09.798 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:09.798 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:09.799 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:10.810 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:10.810 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:10.811 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:11.826 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t4 测试完成
+2023-11-27 15:26:11.826 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t5 ...
+2023-11-27 15:26:11.830 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-11-27 15:26:11.831 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:11.831 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:11.832 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:12.835 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:12.835 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:12.836 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:13.847 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:13.847 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:13.847 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2023-11-27 15:26:14.855 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:14.855 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:14.856 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:15.867 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:15.867 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:15.868 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:16.874 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:16.874 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:16.875 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:17.884 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-11-27 15:26:17.884 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-11-27 15:26:17.885 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2023-11-27 15:26:18.893 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t5 测试完成
+2023-11-27 15:26:18.893 [main] INFO  c.j.c.s.test.auto.modules.TestActuator - 正在测试目录: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal/t6 ...
+2023-11-27 15:26:18.893 [main] INFO  c.j.c.s.test.auto.modules.FileComparator - 正在比较输出文件与预期文件 ...
+2023-11-27 15:26:18.901 [main] INFO  c.j.c.s.test.auto.modules.FileComparator - 比较输出文件与预期文件完成
+2023-11-27 15:26:18.920 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd5eb1ba5, L:/[0:0:0:0:0:0:0:0]:8090] INACTIVE
+2023-11-27 15:26:18.920 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xd5eb1ba5, L:/[0:0:0:0:0:0:0:0]:8090] UNREGISTERED
+2023-11-27 15:26:20.996 [SpringApplicationShutdownHook] INFO  com.jhc.csbot.websocket.NettyWebSocketServer - 关闭 ws server 成功
+2023-11-27 15:26:21.005 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-27 15:26:21.012 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

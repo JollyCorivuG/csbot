@@ -18,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AttributeField {
-    private String name;
-    private List<AttributeTypeEnum> validTypes;
-    private Boolean isRequired;
+    private String name; // 属性名
+    private List<AttributeTypeEnum> validTypes; // 有效类型
+    private Boolean isRequired; // 是否必须
 }

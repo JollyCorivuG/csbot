@@ -22,10 +22,10 @@ public class Intent extends AbstractVariable {
         return KeywordEnum.INTENT;
     }
 
-    private List<String> pattern;
-    private List<String> include;
-    private Integer priority;
-    private Action execAction;
+    private List<String> pattern; // 正则匹配规则
+    private List<String> include; // 简单包含规则
+    private Integer priority; // 优先级
+    private Action execAction; // 执行动作
 
     @Override
     public String toString() {

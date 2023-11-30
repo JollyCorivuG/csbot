@@ -1,0 +1,10 @@
+global 1_打招呼 {
+    type: "string";
+    value: "您好";
+}
+
+
+
+
+
+

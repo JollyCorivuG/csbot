@@ -20,9 +20,6 @@ public class UsersState {
      */
     public static void init(Long userId) {
         stateMap.put(userId, VariableTable.initStatus);
-
-
-
         CsBotActuator.execStatus(userId, VariableTable.initStatus);
     }
 
@@ -58,5 +55,12 @@ public class UsersState {
             throw new RuntimeException("用户" + userId + "不存在");
         }
         return status;
+    }
+
+    /**
+     * 清空所有用户的状态
+     */
+    public static void clear() {
+        stateMap.clear();
     }
 }

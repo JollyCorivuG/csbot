@@ -20,7 +20,7 @@ import org.springframework.transaction.event.TransactionalEventListener;
 @Component
 @Slf4j
 public class MsgSendListener {
-    @Resource
+    @Resource(name = "msgServiceImpl")
     private IMsgService msgService;
 
     @Resource

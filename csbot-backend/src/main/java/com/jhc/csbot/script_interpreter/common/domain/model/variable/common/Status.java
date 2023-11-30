@@ -33,7 +33,7 @@ public class Status extends AbstractVariable {
     }
 
 
-    private Boolean init;
-    private String speak;
-    private List<Option> options = new ArrayList<>();
+    private Boolean init; // 是否为初始状态
+    private String speak; // 主动说的话
+    private List<Option> options = new ArrayList<>(); // 选项
 }

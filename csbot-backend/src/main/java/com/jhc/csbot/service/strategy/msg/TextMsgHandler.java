@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class TextMsgHandler extends AbstractMsgHandler {
-    @Resource
+    @Resource(name = "msgServiceImpl")
     private IMsgService msgService;
 
     /**

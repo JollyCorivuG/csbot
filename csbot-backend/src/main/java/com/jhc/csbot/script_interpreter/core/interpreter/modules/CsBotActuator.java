@@ -13,6 +13,8 @@ import com.jhc.csbot.script_interpreter.common.domain.model.variable.common.Inte
 import com.jhc.csbot.script_interpreter.common.domain.model.variable.common.Status;
 import com.jhc.csbot.script_interpreter.core.interpreter.environment.UsersState;
 import com.jhc.csbot.script_interpreter.core.interpreter.environment.VariableTable;
+import com.jhc.csbot.script_interpreter.test.auto.modules.TestFlag;
+import com.jhc.csbot.script_interpreter.test.stub.WebSocketStub;
 import com.jhc.csbot.service.IMsgService;
 import com.jhc.csbot.service.IWebSocketService;
 
@@ -25,7 +27,7 @@ import java.util.List;
  */
 public class CsBotActuator {
     private static final IWebSocketService webSocketService = SpringUtil.getBean(IWebSocketService.class); // ws 服务, 用于主动推送消息
-    private static final IMsgService msgService = SpringUtil.getBean(IMsgService.class); // 消息服务, 用于发送消息
+    private static final IMsgService msgService = SpringUtil.getBean("msgServiceImpl", IMsgService.class); // 消息服务, 用于发送消息
 
 
     /**
@@ -35,6 +37,13 @@ public class CsBotActuator {
      */
     private static void execMsgSend(String rawReply, Long roomId) {
         String reply = ReplyConverter.templateString(roomId, rawReply);
+        // 如果是测试环境
+        if (TestFlag.isTest) {
+            // ws 测试桩
+            WebSocketStub.sendMsg(reply);
+            return;
+        }
+
         SendMsgReq req = SendMsgReq.builder()
                 .type(MsgTypeEnum.TEXT.getType())
                 .body(TextMsg.builder().content(reply).build())
@@ -62,9 +71,9 @@ public class CsBotActuator {
 
         // 2.执行状态的 options
         if (!status.getOptions().isEmpty()) {
-            StringBuilder showMsg = new StringBuilder("您可以通过输入以下选项进行: \n");
+            StringBuilder showMsg = new StringBuilder("您可以通过输入以下选项进行: ");
             for (Status.Option option : status.getOptions()) {
-                showMsg.append(option.getInput()).append(": ").append(option.getText()).append("\n");
+                showMsg.append(option.getInput()).append("->").append(option.getText()).append("  ");
             }
             // 去掉最后面的换行符
             showMsg.deleteCharAt(showMsg.length() - 1);

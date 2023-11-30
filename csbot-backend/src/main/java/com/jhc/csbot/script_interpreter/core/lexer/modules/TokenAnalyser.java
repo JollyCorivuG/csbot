@@ -80,6 +80,7 @@ public class TokenAnalyser {
                 while (index < chInfoList.size() && chInfoList.get(index).getCh() != '"') {
                     if (chInfoList.get(index).getCh() == '\n') {
                         ErrorUtils.declareLexicalError(LexicalErrorEnum.UNCLOSED_STRING, chInfoList.get(index).getLine(), "字符串没有闭合");
+                        break;
                     }
                     stringBuilder.append(chInfoList.get(index).getCh());
                     index++;

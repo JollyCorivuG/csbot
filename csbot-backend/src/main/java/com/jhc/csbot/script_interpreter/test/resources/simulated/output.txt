@@ -1,0 +1,34 @@
+机器人说的话：user_ohj7zu, 您好！请问有什么可以帮助您吗?
+机器人说的话：您可以通过输入以下选项进行: 1->查头像  2->查手机号
+用户说的话：1
+机器人说的话：您的头像地址是：https://api.multiavatar.com/user_ohj7zu.png
+用户说的话：2
+机器人说的话：您的手机号是：18611555833
+用户说的话：h你好
+机器人说的话：抱歉，我不太明白您的意思, 请换个说法试试
+用户说的话：你好
+机器人说的话：你好！很高兴为您服务
+机器人说的话：user_ohj7zu, 您好！请问有什么可以帮助您吗?
+机器人说的话：您可以通过输入以下选项进行: 1->查头像  2->查手机号
+用户说的话：1
+机器人说的话：您的头像地址是：https://api.multiavatar.com/user_ohj7zu.png
+用户说的话：2
+机器人说的话：您的手机号是：18611555833
+用户说的话：早上好
+机器人说的话：你好！很高兴为您服务
+用户说的话：头像
+机器人说的话：您的头像地址是：https://api.multiavatar.com/user_ohj7zu.png
+用户说的话：我的手机号是啥
+机器人说的话：您的手机号是：18611555833
+用户说的话：ok
+机器人说的话：抱歉，我不太明白您的意思, 请换个说法试试
+用户说的话：1
+机器人说的话：抱歉，我不太明白您的意思, 请换个说法试试
+用户说的话：手机号
+机器人说的话：您的手机号是：18611555833
+机器人说的话：user_ohj7zu, 您好！请问有什么可以帮助您吗?
+机器人说的话：您可以通过输入以下选项进行: 1->查头像  2->查手机号
+用户说的话：1
+机器人说的话：您的头像地址是：https://api.multiavatar.com/user_ohj7zu.png
+用户说的话：2
+机器人说的话：您的手机号是：18611555833Lexical Error: [字符串没有闭合] at line 3Lexical Error: [字符串没有闭合] at line 4Lexical Error: [字符串没有闭合] at line 5Lexical Error: [字符串没有闭合] at line 6Lexical Error: [字符串没有闭合] at line 7Lexical Error: [字符串没有闭合] at line 8Lexical Error: [字符串没有闭合] at line 9Lexical Error: [字符串没有闭合] at line 10Lexical Error: [字符串没有闭合] at line 10Lexical Error: [ 中出现了非法字符] at line 10Syntax Error: [不完整的语句] at line 1Lexical Error: [字符串没有闭合] at line 3Lexical Error: [字符串没有闭合] at line 4Lexical Error: [字符串没有闭合] at line 5Lexical Error: [字符串没有闭合] at line 6Lexical Error: [字符串没有闭合] at line 7Lexical Error: [字符串没有闭合] at line 8Lexical Error: [字符串没有闭合] at line 9Lexical Error: [字符串没有闭合] at line 10Lexical Error: [字符串没有闭合] at line 10Lexical Error: [ 中出现了非法字符] at line 10Syntax Error: [不完整的语句] at line 1Lexical Error: [字符串没有闭合] at line 3Lexical Error: [字符串没有闭合] at line 4Lexical Error: [字符串没有闭合] at line 5Lexical Error: [字符串没有闭合] at line 6Lexical Error: [字符串没有闭合] at line 7Lexical Error: [字符串没有闭合] at line 8Lexical Error: [字符串没有闭合] at line 9Lexical Error: [字符串没有闭合] at line 10Lexical Error: [字符串没有闭合] at line 10Lexical Error: [ 中出现了非法字符] at line 10Lexical Error: [1_打招呼 不是合法的标识符命名] at line 1Lexical Error: [1_打招呼 中出现了非法字符] at line 1Syntax Error: [不是预期的词法, global 不是标识符] at line 1Syntax Error: [变量 执行问候 未定义] at line 4Syntax Error: [global 类型的变量中属性 value 的类型不正确, 与 type 不匹配] at line 3Syntax Error: [变量 i 重复定义] at line 6Syntax Error: [global 类型的变量中缺少属性 value] at line 1Lexical Error: [字符串没有闭合] at line 3Lexical Error: [字符串没有闭合] at line 4Lexical Error: [字符串没有闭合] at line 5Lexical Error: [字符串没有闭合] at line 6Lexical Error: [字符串没有闭合] at line 7Lexical Error: [字符串没有闭合] at line 8Lexical Error: [字符串没有闭合] at line 9Lexical Error: [字符串没有闭合] at line 10Lexical Error: [字符串没有闭合] at line 10Lexical Error: [ 中出现了非法字符] at line 10Lexical Error: [1_打招呼 不是合法的标识符命名] at line 1Lexical Error: [1_打招呼 中出现了非法字符] at line 1Syntax Error: [不是预期的词法, global 不是标识符] at line 1Syntax Error: [变量 执行问候 未定义] at line 4Syntax Error: [global 类型的变量中属性 value 的类型不正确, 与 type 不匹配] at line 3Syntax Error: [变量 i 重复定义] at line 6Syntax Error: [global 类型的变量中缺少属性 value] at line 1

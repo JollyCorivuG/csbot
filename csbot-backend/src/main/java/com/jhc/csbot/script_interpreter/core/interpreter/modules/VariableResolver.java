@@ -11,6 +11,7 @@ import com.jhc.csbot.script_interpreter.common.domain.model.variable.common.Glob
 import com.jhc.csbot.script_interpreter.common.domain.model.variable.exclusive.Env;
 import com.jhc.csbot.script_interpreter.common.domain.model.variable.exclusive.Query;
 import com.jhc.csbot.script_interpreter.core.interpreter.environment.VariableTable;
+import com.jhc.csbot.script_interpreter.test.stub.MysqlCrudStub;
 
 import java.util.Map;
 
@@ -21,6 +22,8 @@ import java.util.Map;
  */
 public class VariableResolver {
     private static final UserDao userDao = SpringUtil.getBean(UserDao.class);
+
+    private static final MysqlCrudStub mysqlCrudStub = SpringUtil.getBean(MysqlCrudStub.class);
 
 
     /**
@@ -90,6 +93,9 @@ public class VariableResolver {
                     return g.getValue();
                 }
                 case QUERY -> {
+//                    // 测试桩
+//                    return mysqlCrudStub.query();
+
                     Query q = (Query) v;
                     return resolveQuery(userId, q);
                 }

@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/capi/msg")
 @Tag(name = "消息相关接口")
 public class MsgController {
-    @Resource
+    @Resource(name = "msgServiceImpl")
     private IMsgService msgService;
 
 

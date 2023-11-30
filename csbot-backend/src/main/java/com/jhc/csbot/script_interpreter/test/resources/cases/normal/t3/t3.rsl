@@ -1,0 +1,95 @@
+// 电影 1 相关信息
+global 电影1 {
+    type: "string";
+    value: "国际列车大劫案：莫斯科行动";
+}
+global 电影1票价 {
+    type: "int";
+    value: 30;
+}
+
+// 电影 2 相关信息
+global 电影2 {
+    type: "string";
+    value: "夺命狙击3破晓";
+}
+global 电影2票价 {
+    type: "int";
+    value: 40;
+}
+
+// 电影 3 相关信息
+global 电影3 {
+    type: "string";
+    value: "第八个嫌疑人";
+}
+global 电影3票价 {
+    type: "int";
+    value: 50;
+}
+
+// 查询电影详情
+intent 查询所有电影 {
+    include: ["所有电影", "电影列表"];
+    priority: 1;
+    exec_action: 执行查询所有电影;
+}
+action 执行查询所有电影 {
+    default: false;
+    reply: "您好！目前正在上映的电影有：${电影1}、${电影2}、${电影3}。";
+    after_status: 电影欢迎;
+}
+
+// 查询电影1票价
+intent 查询电影1票价 {
+    pattern: ["(?=.*国际列车大劫案：莫斯科行动)(?=.*票价)^.*"];
+    priority: 1;
+    exec_action: 执行查询电影1票价;
+}
+action 执行查询电影1票价 {
+    default: false;
+    reply: "您好！${电影1}的票价为${电影1票价}元。";
+    after_status: 电影欢迎;
+}
+
+// 查询电影2票价
+intent 查询电影2票价 {
+    pattern: ["(?=.*夺命狙击3破晓)(?=.*票价)^.*"];
+    priority: 1;
+    exec_action: 执行查询电影2票价;
+}
+action 执行查询电影2票价 {
+    default: false;
+    reply: "您好！${电影2}的票价为${电影2票价}元。";
+    after_status: 电影欢迎;
+}
+
+// 查询电影3票价
+intent 查询电影3票价 {
+    pattern: ["(?=.*第八个嫌疑人)(?=.*票价)^.*"];
+    priority: 1;
+    exec_action: 执行查询电影3票价;
+}
+action 执行查询电影3票价 {
+    default: false;
+    reply: "您好！${电影3}的票价为${电影3票价}元。";
+    after_status: 电影欢迎;
+}
+
+
+// 默认
+action 默认 {
+    default: true;
+    reply: "抱歉, 没有找到该电影的相关信息。";
+    after_status: 电影欢迎;
+}
+
+status 电影欢迎 {
+    init: true;
+    speak: "您好！请问您想查询哪部电影的详情?";
+    option: [{
+        input: "1";
+        text: "查询电影列表";
+        purpose: 查询所有电影;
+    }];
+}

@@ -54,6 +54,7 @@ public class LexicalUtils {
         // 6.2如果以数字开头，那么说明是不合法的标识符命名
         if (value.matches("[0-9][a-zA-Z0-9_一-龥]*")) {
             ErrorUtils.declareLexicalError(LexicalErrorEnum.INVALID_IDENTIFIER_NAME, line, value + " 不是合法的标识符命名");
+            return null;
         }
         // 6.3说明含有非法字符
         ErrorUtils.declareLexicalError(LexicalErrorEnum.UNKNOWN_SYMBOL, line, value + " 中出现了非法字符");

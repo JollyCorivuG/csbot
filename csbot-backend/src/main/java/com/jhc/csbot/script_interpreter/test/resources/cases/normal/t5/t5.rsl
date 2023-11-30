@@ -1,0 +1,108 @@
+// 商品 1 相关信息
+global 商品1 {
+    type: "string";
+    value: "电子产品A";
+}
+global 商品1价格 {
+    type: "int";
+    value: 1000;
+}
+
+// 商品 2 相关信息
+global 商品2 {
+    type: "string";
+    value: "时尚服饰B";
+}
+global 商品2价格 {
+    type: "int";
+    value: 500;
+}
+
+// 商品 3 相关信息
+global 商品3 {
+    type: "string";
+    value: "家居用品C";
+}
+global 商品3价格 {
+    type: "int";
+    value: 300;
+}
+
+// 查询商品信息
+intent 查询所有商品 {
+    include: ["所有商品", "商品列表"];
+    priority: 1;
+    exec_action: 执行查询所有商品;
+}
+action 执行查询所有商品 {
+    default: false;
+    reply: "您好！我们有以下商品：${商品1}、${商品2}、${商品3}。";
+    after_status: 购物欢迎;
+}
+
+// 查询商品1价格
+intent 查询商品1价格 {
+    pattern: ["(?=.*电子产品A)(?=.*价格)^.*"];
+    priority: 1;
+    exec_action: 执行查询商品1价格;
+}
+action 执行查询商品1价格 {
+    default: false;
+    reply: "您好！${商品1}的价格是${商品1价格}元。";
+    after_status: 购物欢迎;
+}
+
+// 查询商品2价格
+intent 查询商品2价格 {
+    pattern: ["(?=.*时尚服饰B)(?=.*价格)^.*"];
+    priority: 1;
+    exec_action: 执行查询商品2价格;
+}
+action 执行查询商品2价格 {
+    default: false;
+    reply: "您好！${商品2}的价格是${商品2价格}元。";
+    after_status: 购物欢迎;
+}
+
+// 查询商品3价格
+intent 查询商品3价格 {
+    pattern: ["(?=.*家居用品C)(?=.*价格)^.*"];
+    priority: 1;
+    exec_action: 执行查询商品3价格;
+}
+action 执行查询商品3价格 {
+    default: false;
+    reply: "您好！${商品3}的价格是${商品3价格}元。";
+    after_status: 购物欢迎;
+}
+
+// 查询再见
+intent 查询再见 {
+    include: ["再见"];
+    priority: 1;
+    exec_action: 执行查询再见;
+}
+action 执行查询再见 {
+    default: false;
+    reply: "再见，祝您有美好的一天！";
+    after_status: 购物欢迎;
+}
+
+// 默认
+action 默认 {
+    default: true;
+    reply: "抱歉, 没有找到相关商品的信息。";
+    after_status: 购物欢迎;
+}
+
+status 购物欢迎 {
+    init: true;
+    speak: "您好！请问您想查询哪个商品的详情?";
+    option: [
+        {
+            input: "1";
+            text: "查询所有商品";
+            purpose: 查询所有商品;
+        }
+    ];
+}

@@ -22,7 +22,7 @@ public class Query extends AbstractVariable {
         return KeywordEnum.QUERY;
     }
 
-    private String table;
-    Map<String, Map.Entry<AbstractVariable, String>> filters;
-    private String field;
+    private String table; // 表名
+    Map<String, Map.Entry<AbstractVariable, String>> filters; // 过滤条件, key 为字段名, value 为过滤条件
+    private String field; // 字段名
 }

@@ -20,5 +20,5 @@ public class Global extends AbstractVariable {
         return KeywordEnum.GLOBAL;
     }
 
-    private String value;
+    private String value; // 值
 }

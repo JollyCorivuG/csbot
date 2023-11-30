@@ -35,8 +35,6 @@ spring:
       max-request-size: 10MB
 mybatis-plus:
   type-aliases-package: com.jhc.csbot.model.entity
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     enable-sql-runner: true
 knife4j:
@@ -46,3 +44,9 @@ knife4j:
 script:
   interpreter:
     script-path: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\script.txt
+    auto-test:
+      case-type: normal
+      case-dir: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\resources\cases\normal
+      test-cnt: 1
+      timeout: 1000
+      result-file: E:\full_stack_project\csbot\csbot-backend\src\main\java\com\jhc\csbot\script_interpreter\test\auto\result.txt

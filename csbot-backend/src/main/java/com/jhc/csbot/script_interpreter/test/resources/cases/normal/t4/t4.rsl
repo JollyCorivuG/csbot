@@ -1,0 +1,94 @@
+// 病人 1 相关信息
+global 病人1 {
+    type: "string";
+    value: "张三";
+}
+global 病人1病历号 {
+    type: "int";
+    value: 1001;
+}
+
+// 病人 2 相关信息
+global 病人2 {
+    type: "string";
+    value: "李四";
+}
+global 病人2病历号 {
+    type: "int";
+    value: 1002;
+}
+
+// 病人 3 相关信息
+global 病人3 {
+    type: "string";
+    value: "王五";
+}
+global 病人3病历号 {
+    type: "int";
+    value: 1003;
+}
+
+// 查询病人信息
+intent 查询所有病人 {
+    include: ["所有病人", "病人列表"];
+    priority: 1;
+    exec_action: 执行查询所有病人;
+}
+action 执行查询所有病人 {
+    default: false;
+    reply: "您好！当前系统中的病人有：${病人1}、${病人2}、${病人3}。";
+    after_status: 医疗欢迎;
+}
+
+// 查询病人1病历号
+intent 查询病人1病历号 {
+    pattern: ["(?=.*张三)(?=.*病历号)^.*"];
+    priority: 1;
+    exec_action: 执行查询病人1病历号;
+}
+action 执行查询病人1病历号 {
+    default: false;
+    reply: "您好！${病人1}的病历号是${病人1病历号}。";
+    after_status: 医疗欢迎;
+}
+
+// 查询病人2病历号
+intent 查询病人2病历号 {
+    pattern: ["(?=.*李四)(?=.*病历号)^.*"];
+    priority: 1;
+    exec_action: 执行查询病人2病历号;
+}
+action 执行查询病人2病历号 {
+    default: false;
+    reply: "您好！${病人2}的病历号是${病人2病历号}。";
+    after_status: 医疗欢迎;
+}
+
+// 查询病人3病历号
+intent 查询病人3病历号 {
+    pattern: ["(?=.*王五)(?=.*病历号)^.*"];
+    priority: 1;
+    exec_action: 执行查询病人3病历号;
+}
+action 执行查询病人3病历号 {
+    default: false;
+    reply: "您好！${病人3}的病历号是${病人3病历号}。";
+    after_status: 医疗欢迎;
+}
+
+// 默认
+action 默认 {
+    default: true;
+    reply: "抱歉, 没有找到该病人的相关信息。";
+    after_status: 医疗欢迎;
+}
+
+status 医疗欢迎 {
+    init: true;
+    speak: "您好！请问您想查询哪位病人的详情?";
+    option: [{
+        input: "1";
+        text: "查询病人列表";
+        purpose: 查询所有病人;
+    }];
+}

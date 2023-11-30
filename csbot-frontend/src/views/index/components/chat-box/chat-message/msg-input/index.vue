@@ -22,6 +22,9 @@ const userStore = useUserStore()
 const msgStore = useMsgStore()
 const msg = ref<string>('')
 const sendMsg = async () => {
+    if (msg.value == '') {
+        return
+    }
     const params: SendMsgParams = {
         roomId: userStore.userInfo.id,
         type: MsgType.TEXT,

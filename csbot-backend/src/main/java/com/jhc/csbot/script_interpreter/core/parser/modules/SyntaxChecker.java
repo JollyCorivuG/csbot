@@ -21,6 +21,7 @@ public class SyntaxChecker {
      * @param value
      */
     private static void checkFirstLevelNode(String key, SyntaxTreeNode value, Set<String> variables) {
+        // 从工厂中获取相应的检查器
         AbstractKeywordChecker checker = KeywordCheckerFactory.getStrategy(key);
         checker.check(value, variables);
     }

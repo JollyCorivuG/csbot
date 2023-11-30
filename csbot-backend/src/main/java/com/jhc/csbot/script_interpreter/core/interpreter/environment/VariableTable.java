@@ -34,4 +34,14 @@ public class VariableTable {
             System.out.println(k + " : " + v);
         });
     }
+
+    /**
+     * 清空变量表
+     */
+    public static void clear() {
+        variableMap.clear();
+        intents.clear();
+        initStatus = null;
+        defaultAction = null;
+    }
 }

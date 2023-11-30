@@ -20,7 +20,7 @@ public class Action extends AbstractVariable {
         return KeywordEnum.ACTION;
     }
 
-    private Boolean isDefault;
-    private String reply;
-    private Status afterStatus;
+    private Boolean isDefault; // 是否为默认动作
+    private String reply; // 回复
+    private Status afterStatus; // 执行动作后的状态
 }
