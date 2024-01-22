@@ -252,7 +252,7 @@ ArrayLiteral       ::= "[" (Value ("," Value)*)? "]"
 ObjectLiteral      ::= "{" (Identifier ":" Value ("," Identifier ":" Value)*)? "}"
 ```
 
-1. ## 示例脚本以及运行效果
+## 3.示例脚本以及运行效果
 
 ### 示例脚本
 
