@@ -1,22 +1,22 @@
 # 一、DSL 的语言设计
 
-1. ## 设计理念
+## 1.设计理念
 
 如今市面上的各种平台系统，如京东、淘宝等，为了提升客服效率，都设有客服机器人的功能，即根据用户的输入，可以按照一定的逻辑给予回复。而这个逻辑的产生是由一种特定领域的语言所决定（**DSL** **语言**），因此，我们需要设计一套 DSL 语法，这个语法需要**遵循简洁**、**用户体验优先**、**易上手**、**扩展性强**、**易集成**等特点。
 
 本项目从上述特点出发，设计了一套 DSL 语言，旨在帮助系统开发一个可以对用户输入做出自动回复的客服机器人，提升用户体验的同时降低人工客服的成本。
 
-1. ## 词法定义
+## 2.词法定义
 
 在进行语法定义之前，需要设计 DSL 语言所用到的词法，本项目中所包含的词法类型共有以下几种：
 
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWFkN2M2YjZiZDljMzEzZGRiZDU2NWNmYzZkMTc4NDVfR0lZTE0xMW1vZTEzOEwwOG90UzhsNll0VXNSN0F6S1dfVG9rZW46Q2xpYWJjRkZ6b3dWM3N4Nm8xWmNKRThwbmVoXzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
+![](./\docs\images\词法类型.PNG)
 
 对于每一种词法类型，又包含具体的词汇。
 
 关键字：
 
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDI5ZDE5YjFiYzFhMmMwNzJlNWE4ZjViNjRiMmNiOTNfNUFsdGdaZzRXbkFvcmg5ZHU1T3hCRkxMVkhuVVd3YnVfVG9rZW46T1hFUGJLekJib1JDQnh4b1o3MWNZQll1bjhFXzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
+![](./\docs\images\关键字.PNG)
 
 标识符：合法的变量命名
 
@@ -28,15 +28,15 @@
 
 分隔符：
 
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=NTcxMzA3YmIzMzIxYWMwZWZkMzgzOGUzYzI4MmYwMmNfRkhWM2VVWHpaMWlkWFZZanpJQm9QMlRKaldQSkNPczJfVG9rZW46S1FHdGIxY1Vhb3NMUUV4REU4TGNrdnV1blNmXzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
+![](./\docs\images\分隔符.PNG)
 
 运算符：
 
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=NTg1YmFiYTJiYTFkM2EyNzgzNzdlNGQyMzc1ZDYyNGZfVFlYN25DS1lnOUxkcDhOck5RU1lnVDNHejBaNnZzY1JfVG9rZW46V3cyeGJmcVRqb1kyMVR4dnVwYmNZZlJ5bjBnXzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
+![](./\docs\images\运算符.PNG)
 
 以上就是本项目中所用到的词法，这些词法是用于描述 DSL 中的词法结构，即如何将输入的字符序列划分为有意义的标记（tokens），在后续的词法分析、语法分析中有着重要的作用。
 
-1. ## 语法定义
+## 3.语法定义
 
 在设计一套 DSL 语言时，语法的定义是其中很重要的一环，清晰的语法定义可以帮助脚本开发者快速上手并开发一套完备的脚本。
 
@@ -362,15 +362,9 @@ status 常规 {
 }
 ```
 
-### 运行效果
-
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=YTNjMjk3ODIwZWRjMDczMTRmZGZiYTdjOWM0M2Q0NTFfUEFPYzJOUVFOQmhBdHpnNzFHWFdTaTBlRXNIM0Q3dE5fVG9rZW46R3NzVWJsaDhyb0F4cm94bmp6SWNtYXcybnZ1XzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
-
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=NjdhYzBkYjhjMjJhZjUxY2M1YjdhN2NhYzg4MzAzZmRfTW9pcm9mZE9MYlEyVnhpQ1pPSzdBWnp0ekUyMHFiVUdfVG9rZW46RXExWGJrdVVBb3NocW54aHZQbWNMejVCbm9nXzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
-
 # 二、模块设计
 
-1. ## 系统架构
+## 1.系统架构
 
 本项目采用的是**前后端分离架构模式**，前后端用到的技术栈以及对应职责为：
 
@@ -386,15 +380,15 @@ status 常规 {
 
 ### 系统架构图
 
-暂时无法在飞书文档外展示此内容
+![](./\docs\images\系统架构图.png)
 
-1. ## 应答机器人模块
+## 2.应答机器人模块
 
 本项目的重点是根据上面定义的 DSL 语言实现一个解释器，这个解释器可以根据用户输入，执行脚本逻辑，并产生相应的应答。
 
 因此，这一块的模块设计就起到非常重要的作用。为了降低模块之间的耦合性，我将脚本解释器的实现分为了以下目录：
 
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=MDBiNTdhYzU3MGEyNGY4YzAwZjc0NjE2Y2JjYzM1ZDVfeHNaU1UxMUc4SFZrbWFNTVpRY0xUOGNack1xbEg1TllfVG9rZW46S2NSN2I2NkE0b09nOTl4eXpBS2NwNnZtbjVmXzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
+![](./\docs\images\解释器目录结构.png)
 
 其中每一个目录都有自己的职责，如下表所示：
 
@@ -414,15 +408,15 @@ status 常规 {
 
 core 总共分为 **3** 个主要模块，分别是词法分析器、语法分析器、 解释器。在每个模块中，又分别有个 modules 目录，表示该模块的子模块，如下图所示：
 
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=MmZkNGMyZWFkODJkN2RhZDhkM2Q0YmNjN2QwZmE2MGFfT3RpcDhTVGRyWXpiN3JldjZmbFBmMTJWaDJCenh6ejlfVG9rZW46VExIVGJDekpob3FXdFp4ZTFoNmNRS2pqbjN5XzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
+![](./\docs\images\解释器核心模块划分.png)
 
 由于每个主模块中包含若干个子模块，因此这里用一张**模块结构图**来表示各个模块之间的调用关系以及包含关系：
 
-暂时无法在飞书文档外展示此内容
+![](./\docs\images\解释器模块关系图.png)
 
 以上就是脚本解释器所有的模块划分，每个模块都有具体的职责，模块之间可以相互调用，将一个独立的功能封装为一个独立的类，提供接口给外面模块调用，大大降低了系统的冗余度，提高了系统的扩展性。
 
-1. ## 设计模式的运用
+## 3.设计模式的运用
 
 本项目主要运用了设计模式中的策略模式、工厂模式。
 
@@ -442,7 +436,7 @@ if (keyword == "env"） {
 
 因此，采用策略模式、工厂模式即可解决这一问题，具体的代码格式如下：
 
-![img](https://fsbupteducn.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ4YjU3NzFhNmRhMGY3ZjZhMWU4ZDI3ODQwMjkwNTRfdEdobFRianJYNTVrbTVLMjVybEhURUJCYnljM2pPUWJfVG9rZW46Q3JraWJrQ2VBb1FUenJ4YUJVbmNiWk5sbnRjXzE3MDEzMTE2NzY6MTcwMTMxNTI3Nl9WNA)
+![](./\docs\images\设计模式.png)
 
 现在，只需要用两行行代码就可以根据关键字类型进行相应的检查逻辑，如下所示：
 

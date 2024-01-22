@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.49">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.51">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1036,8 +1036,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="302" parent="1" name="csbot">
-      <IntrospectionTimestamp>2023-10-09.21:45:16</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-10-09.05:45:16</LocalIntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2023-10-09.05:45:16</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <user id="303" parent="1" name="mysql.infoschema">

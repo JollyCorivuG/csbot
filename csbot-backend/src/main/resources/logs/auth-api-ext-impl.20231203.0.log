@@ -1,0 +1,52 @@
+2023-12-03 15:52:43.489 [main] INFO  com.jhc.csbot.CsBotApplication - Starting CsBotApplication using Java 17.0.6 with PID 3704 (E:\full_stack_project\csbot\csbot-backend\target\classes started by dell in E:\full_stack_project\csbot\csbot-backend)
+2023-12-03 15:52:43.490 [main] INFO  com.jhc.csbot.CsBotApplication - The following 1 profile is active: "dev"
+2023-12-03 15:52:44.497 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-03 15:52:44.499 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-03 15:52:44.533 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-12-03 15:52:45.226 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-12-03 15:52:45.234 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8081"]
+2023-12-03 15:52:45.235 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-03 15:52:45.235 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-12-03 15:52:45.324 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-03 15:52:45.324 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1799 ms
+2023-12-03 15:52:46.233 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x588cfa5e] REGISTERED
+2023-12-03 15:52:46.234 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x588cfa5e] BIND: 0.0.0.0/0.0.0.0:8090
+2023-12-03 15:52:46.235 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x588cfa5e, L:/[0:0:0:0:0:0:0:0]:8090] ACTIVE
+2023-12-03 15:52:46.253 [main] INFO  c.j.c.script_interpreter.core.parser.ScriptParser - 语法检查完成
+2023-12-03 15:52:47.397 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-03 15:52:47.453 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8081"]
+2023-12-03 15:52:47.464 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-12-03 15:52:47.479 [main] INFO  com.jhc.csbot.CsBotApplication - Started CsBotApplication in 4.298 seconds (process running for 10.746)
+2023-12-03 15:53:26.024 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x588cfa5e, L:/[0:0:0:0:0:0:0:0]:8090] READ: [id: 0xb2b947e6, L:/[0:0:0:0:0:0:0:1]:8090 - R:/[0:0:0:0:0:0:0:1]:64780]
+2023-12-03 15:53:26.026 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x588cfa5e, L:/[0:0:0:0:0:0:0:0]:8090] READ COMPLETE
+2023-12-03 15:53:26.108 [nioEventLoopGroup-5-1] INFO  c.jhc.csbot.websocket.NettyWebSocketServerHandler - 客户端尝试连接
+2023-12-03 15:53:26.119 [http-nio-0.0.0.0-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-03 15:53:26.120 [http-nio-0.0.0.0-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-03 15:53:26.122 [http-nio-0.0.0.0-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-12-03 15:53:26.296 [http-nio-0.0.0.0-8081-exec-3] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: a80e79af25ba48808a02daf209ea676a, path: /capi/auth/public/refresh/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cCI6MTcwMjA0Njg4NSwiaWF0IjoxNzAxNDQyMDg1fQ.igiRm_bslR-udiLoK5hmBuaz6k3Mnzoi6ycAs5gRAGQ, ip: 0:0:0:0:0:0:0:1, params: [eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImV4cCI6MTcwMjA0Njg4NSwiaWF0IjoxNzAxNDQyMDg1fQ.igiRm_bslR-udiLoK5hmBuaz6k3Mnzoi6ycAs5gRAGQ]
+2023-12-03 15:53:26.312 [http-nio-0.0.0.0-8081-exec-3] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: a80e79af25ba48808a02daf209ea676a, cost: 17 ms
+2023-12-03 15:53:26.340 [nioEventLoopGroup-5-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-03 15:53:26.370 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: d15dcc323452465c885d1e3ee6ce043d, path: /capi/users/online, ip: 0:0:0:0:0:0:0:1, params: []
+2023-12-03 15:53:26.370 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 1
+2023-12-03 15:53:26.371 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 1
+2023-12-03 15:53:26.371 [http-nio-0.0.0.0-8081-exec-5] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: d15dcc323452465c885d1e3ee6ce043d, cost: 1 ms
+2023-12-03 15:53:26.485 [nioEventLoopGroup-5-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24df6011
+2023-12-03 15:53:26.488 [nioEventLoopGroup-5-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-03 15:53:26.598 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 1
+2023-12-03 15:53:26.599 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 1
+2023-12-03 15:55:13.896 [http-nio-0.0.0.0-8081-exec-8] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: 97d869d68a464d799c530bc310c3e645, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=1})]
+2023-12-03 15:55:13.909 [http-nio-0.0.0.0-8081-exec-8] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: 97d869d68a464d799c530bc310c3e645, cost: 13 ms
+2023-12-03 15:56:26.654 [http-nio-0.0.0.0-8081-exec-1] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: cecc14d2b5da422bb173069b64cecd56, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=我的头像是啥})]
+2023-12-03 15:56:26.660 [http-nio-0.0.0.0-8081-exec-1] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: cecc14d2b5da422bb173069b64cecd56, cost: 6 ms
+2023-12-03 15:56:49.689 [http-nio-0.0.0.0-8081-exec-3] INFO  com.jhc.csbot.aop.ReqLogRecord - request start，id: e5bdd39c9c544f009633f0d6fb8d08a8, path: /capi/msg/send, ip: 0:0:0:0:0:0:0:1, params: [SendMsgReq(roomId=1, type=0, body={content=312312231})]
+2023-12-03 15:56:49.693 [http-nio-0.0.0.0-8081-exec-3] INFO  com.jhc.csbot.aop.ReqLogRecord - request end, id: e5bdd39c9c544f009633f0d6fb8d08a8, cost: 4 ms
+2023-12-03 15:58:56.268 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 0
+2023-12-03 15:58:56.268 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 0
+2023-12-03 15:58:56.268 [nioEventLoopGroup-5-1] WARN  c.jhc.csbot.websocket.NettyWebSocketServerHandler - 触发 channelInactive 掉线![b2b947e6]
+2023-12-03 15:58:56.268 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 当前在线人数: 0
+2023-12-03 15:58:56.268 [nioEventLoopGroup-5-1] INFO  com.jhc.csbot.service.impl.WebSocketServiceImpl - 房间号: 1, 在线人数: 0
+2023-12-03 22:03:29.158 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x588cfa5e, L:/[0:0:0:0:0:0:0:0]:8090] INACTIVE
+2023-12-03 22:03:29.160 [nioEventLoopGroup-4-1] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x588cfa5e, L:/[0:0:0:0:0:0:0:0]:8090] UNREGISTERED
+2023-12-03 22:03:31.219 [SpringApplicationShutdownHook] INFO  com.jhc.csbot.websocket.NettyWebSocketServer - 关闭 ws server 成功
+2023-12-03 22:03:31.231 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-03 22:03:31.233 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
